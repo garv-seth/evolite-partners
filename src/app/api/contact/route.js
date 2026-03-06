@@ -2,20 +2,23 @@ import { Resend } from "resend";
 
 const ALLOWED_INTERESTS = [
   "Tax Strategy & Planning",
-  "IRS Resolution",
+  "IRS Audit / Notice Resolution",
+  "Business Entity Formation (US)",
   "Import / Export Consulting",
-  "Business Formation",
-  "Fractional CFO",
-  "Other",
+  "Tariff Navigation (Sec 301, etc)",
+  "Fractional CFO Services",
+  "Academy / Training",
+  "M&A Due Diligence",
+  "Cross-Border Structuring",
+  "General Consultation",
 ];
 
 const ALLOWED_REVENUES = [
-  "Pre-revenue",
-  "Under $100k",
-  "$100k - $250k",
+  "Pre-revenue / Under $250k",
   "$250k - $1M",
-  "$1M+",
-  "Prefer not to say",
+  "$1M - $5M",
+  "$5M - $10M",
+  "$10M+",
 ];
 
 const EMAIL_RE = /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/;
