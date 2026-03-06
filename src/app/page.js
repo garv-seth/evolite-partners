@@ -175,9 +175,9 @@ export default function Home() {
                 <Image
                   src="/crest.jpeg"
                   alt="Evolite Partners Crest"
-                  fill
+                  width={340}
+                  height={340}
                   className="founder-crest-img"
-                  sizes="(max-width: 992px) 300px, 400px"
                 />
                 <span className="founder-name-label">Shhally Sharma</span>
               </div>
