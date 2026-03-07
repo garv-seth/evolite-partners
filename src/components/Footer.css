@@ -116,6 +116,25 @@
     margin-bottom: 2rem;
 }
 
+.footer-social {
+    display: flex;
+    align-items: center;
+    margin-top: 0.25rem;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.82rem !important;
+    color: var(--text-secondary) !important;
+    transition: color 0.2s ease;
+}
+
+.social-icon:hover {
+    color: var(--color-gold) !important;
+}
+
 .footer-bottom {
     text-align: center;
 }
@@ -129,6 +148,32 @@
 .footer-legal {
     font-size: 0.68rem !important;
     opacity: 0.6;
+}
+
+.footer-legal-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.footer-legal-links a {
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+    opacity: 0.7;
+    transition: opacity 0.2s, color 0.2s;
+}
+
+.footer-legal-links a:hover {
+    color: var(--color-gold);
+    opacity: 1;
+}
+
+.footer-legal-links span {
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+    opacity: 0.4;
 }
 
 @media (max-width: 768px) {

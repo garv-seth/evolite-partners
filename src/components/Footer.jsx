@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { MapPin } from 'lucide-react';
+import { MapPin, Linkedin, Instagram } from 'lucide-react';
 import './Footer.css';
 
 export default function Footer() {
@@ -23,7 +23,7 @@ export default function Footer() {
                             <span className="footer-logo-text">EVOLITE</span>
                             <span className="footer-logo-sub">PARTNERS</span>
                         </div>
-                        <p className="footer-tagline font-accent">"Evolution to Elite"</p>
+                        <p className="footer-tagline font-accent">&ldquo;Evolution to Elite&rdquo;</p>
                         <p className="footer-desc">
                             Tax Strategy · IRS Resolution · Import/Export · Business Formation · Fractional CFO
                         </p>
@@ -34,21 +34,33 @@ export default function Footer() {
                         <Link href="/">Home</Link>
                         <Link href="/services">Services</Link>
                         <Link href="/academy">Academy</Link>
+                        <Link href="/about">About</Link>
                         <Link href="/contact">Contact</Link>
                     </div>
 
                     <div className="footer-links-group">
                         <h4>Resources</h4>
                         <a href="https://evolitepartners.gumroad.com" target="_blank" rel="noopener noreferrer">Digital Store</a>
-                        <a href="https://evolitepartners.gumroad.com/l/pride-self-assessment" target="_blank" rel="noopener noreferrer">PRIDE Assessment</a>
-                        <a href="https://evolitepartners.gumroad.com/l/pride-toolkit-bundle" target="_blank" rel="noopener noreferrer">Tracker Bundle</a>
+                        <a href="https://evolitepartners.gumroad.com/l/pride-self-assessment" target="_blank" rel="noopener noreferrer">PRIDE Self-Assessment</a>
+                        <a href="https://evolitepartners.gumroad.com/l/pride-toolkit-bundle" target="_blank" rel="noopener noreferrer">PRIDE Toolkit Bundle</a>
+                        <a href="https://evolitepartners.gumroad.com" target="_blank" rel="noopener noreferrer">IRS Survival Guide™</a>
+                        <a href="https://calendly.com/evolitepartners" target="_blank" rel="noopener noreferrer">Book a Call</a>
                     </div>
 
                     <div className="footer-links-group">
                         <h4>Connect</h4>
-                        <a href="https://calendly.com/evolitepartners" target="_blank" rel="noopener noreferrer">Book a Call</a>
-                        <a href="mailto:prideinpreparation@gmail.com">prideinpreparation@gmail.com</a>
-                        <span className="footer-location"><MapPin style={{ display: 'inline', width: '0.85rem', height: '0.85rem', verticalAlign: 'middle', marginRight: '4px', marginBottom: '1px' }} /> Washington State · Nationwide</span>
+                        <a href="https://calendly.com/evolitepartners" target="_blank" rel="noopener noreferrer">Book a Call →</a>
+                        <a href="mailto:shhally@evolitepartners.com">shhally@evolitepartners.com</a>
+                        <span className="footer-location">
+                            <MapPin style={{ display: 'inline', width: '0.85rem', height: '0.85rem', verticalAlign: 'middle', marginRight: '4px', marginBottom: '1px' }} />
+                            Washington State · Nationwide · International
+                        </span>
+                        <div className="footer-social">
+                            <a href="#" aria-label="LinkedIn" className="social-icon" rel="noopener noreferrer">
+                                <Linkedin style={{ width: '1rem', height: '1rem' }} />
+                                <span>LinkedIn</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -57,8 +69,13 @@ export default function Footer() {
                 <div className="footer-bottom">
                     <p>© {new Date().getFullYear()} Evolite Partners LLC. All rights reserved.</p>
                     <p className="footer-legal">
-                        KASHAKA™, PRIDE Framework™, PRIDE Academy™ are trademarks of Evolite Partners LLC.
+                        KASHAKA™, PRIDE Framework™, PRIDE Academy™ are trademarks of Evolite Partners LLC. · Washington State · Nationwide Service
                     </p>
+                    <div className="footer-legal-links">
+                        <Link href="/privacy">Privacy Policy</Link>
+                        <span>·</span>
+                        <Link href="/terms">Terms of Service</Link>
+                    </div>
                 </div>
             </div>
         </footer>

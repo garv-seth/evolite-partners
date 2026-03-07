@@ -1,7 +1,7 @@
 'use client';
 import Link from "next/link";
 import Image from "next/image";
-import { ClipboardCheck, CircleDollarSign, Scale, Globe, Megaphone, Target } from "lucide-react";
+import { ClipboardCheck, CircleDollarSign, Scale, Globe, Megaphone, Target, Star, Check, X } from "lucide-react";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import SectionHeader from "@/components/SectionHeader";
@@ -35,6 +35,34 @@ export default function Home() {
     { num: "04", title: "Elite Results", desc: "Tax optimized. IRS resolved. Trade compliant. Business properly structured. That is Elite status — earned, not given." },
   ];
 
+  const testimonials = [
+    {
+      quote: "Before Evolite, I was paying $8,000 more in taxes every year because my entity was wrong. Shhally fixed my structure, filed back corrections, and saved me money I didn't know I was losing.",
+      name: "Client Name",
+      meta: "Business Type · State",
+    },
+    {
+      quote: "I got an IRS notice and panicked. Shhally not only explained exactly what it meant, he resolved it in 3 weeks. I didn't have to talk to the IRS once.",
+      name: "Client Name",
+      meta: "Business Type · State",
+    },
+    {
+      quote: "I'm based in India and wanted to open a US LLC. Most people couldn't help me. Evolite handled everything — EIN, registered agent, bank setup. Done in 2 weeks.",
+      name: "Client Name",
+      meta: "International Client",
+    },
+  ];
+
+  const comparisonRows = [
+    { feature: "Proactive tax strategy", others: "Reactive only", us: "Year-round planning" },
+    { feature: "IRS resolution support", others: "Refer out", us: "Handled in-house" },
+    { feature: "Import/Export & tariffs", others: "Not offered", us: "KASHAKA™ network" },
+    { feature: "PRIDE Framework", others: "No system", us: "5-phase roadmap" },
+    { feature: "Founder-to-founder guidance", others: "Corporate playbook", us: "11 businesses lived" },
+    { feature: "Multi-language support", others: "English only", us: "EN · HI · UR · PB" },
+    { feature: "International US LLC setup", others: "Rarely", us: "Fully supported" },
+  ];
+
   const faqs = [
     { q: "Do I need to have a tax problem to work with you?", a: "Not at all. Most of our clients come to us in perfectly normal situations — they want to pay less in taxes legally, structure their business correctly, understand tariffs, or prepare before a problem happens. You don't need to be in trouble to benefit from strategy. In fact, the best time to call us is before there's a problem." },
     { q: "How much do your services cost?", a: "Our tiers range from $499/month for guided coaching up to $3,999/month for Done-For-You services and $9K–$25K/month for enterprise engagements. Every engagement starts with a free assessment call. We scope the work together and give you a clear number before anything begins. No surprises." },
@@ -42,6 +70,8 @@ export default function Home() {
     { q: "What is KASHAKA™ and how does it help me?", a: "KASHAKA™ is Shhally Sharma's import/export company and global supplier network — active since 2021 across the US, Dubai, China, India, and Africa. When you work with Evolite Partners on trade consulting, you get access to verified suppliers, tariff navigation from someone who has personally cleared customs, and fraud protection built on real experience." },
     { q: "What is the PRIDE Framework and who is it for?", a: "PRIDE stands for Protection, Revenue, Integration, Domination, Evolution. It is the five-phase system we use to assess and grow every business we work with — from a first-year startup to a multi-million dollar operation. It gives your business a clear position, a clear gap, and a clear next step." },
     { q: "Can you help international entrepreneurs set up US businesses?", a: "Yes. We form US entities (LLC, S-Corp, C-Corp) for clients in any state — including international entrepreneurs who want US business infrastructure. We handle EIN, registered agent, operating agreements, and banking setup. Shhally Sharma speaks English, Hindi, Urdu, and Punjabi and has deep roots in India and the UAE." },
+    { q: "Do you work with businesses outside Washington State?", a: "Yes — we work with clients nationwide and internationally. Our compliance work covers all 50 states and we handle federal tax strategy for clients anywhere in the country. Location is no barrier." },
+    { q: "What if I just want help with one thing, like my taxes?", a: "That's completely fine. You can start with a single service — tax strategy, IRS resolution, business formation, or trade consulting — and scale up only when it makes sense for you. We don't require long-term contracts to get started." },
   ];
 
   return (
@@ -200,12 +230,36 @@ export default function Home() {
       <section className="section banner-section">
         <div className="container">
           <div className="banner-inner glass slide-up">
-            <div className="banner-pre">What Makes Evolite Partners Different</div>
-            <h2>Most professionals file your taxes and leave.<br />We build your <em className="font-accent">strategy</em> and stay.</h2>
-            <p>The difference between a tax preparer and a tax strategist is the same as the difference between a contractor and an architect. One builds what you ask for. The other designs what you actually need — with 11 businesses of lived experience and 9 years of Fortune 500 financial strategy behind every decision.</p>
-            <a href="https://calendly.com/evolitepartners" target="_blank" rel="noopener noreferrer" className="btn btn-primary mt-4">
-              Book a Free 30-Minute Call →
-            </a>
+            <div className="banner-grid">
+              <div className="banner-copy">
+                <div className="banner-pre">What Makes Evolite Partners Different</div>
+                <h2>Most professionals file your taxes and leave.<br />We build your <em className="font-accent">strategy</em> and stay.</h2>
+                <p>The difference between a tax preparer and a tax strategist is the same as the difference between a contractor and an architect. One builds what you ask for. The other designs what you actually need — with 11 businesses of lived experience and 9 years of Fortune 500 financial strategy behind every decision.</p>
+                <a href="https://calendly.com/evolitepartners" target="_blank" rel="noopener noreferrer" className="btn btn-primary mt-4">
+                  Book a Free 30-Minute Call →
+                </a>
+              </div>
+              <div className="banner-table-wrap">
+                <table className="comparison-table">
+                  <thead>
+                    <tr>
+                      <th>Feature</th>
+                      <th>Others</th>
+                      <th>Evolite</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {comparisonRows.map((row, i) => (
+                      <tr key={i}>
+                        <td className="comp-feature">{row.feature}</td>
+                        <td className="comp-cross"><X style={{ width: '0.85rem', height: '0.85rem', display: 'inline', verticalAlign: 'middle', marginRight: '0.3rem' }} />{row.others}</td>
+                        <td className="comp-check"><Check style={{ width: '0.85rem', height: '0.85rem', display: 'inline', verticalAlign: 'middle', marginRight: '0.3rem' }} />{row.us}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -232,6 +286,34 @@ export default function Home() {
             <a href="https://evolitepartners.gumroad.com/l/pride-self-assessment" target="_blank" rel="noopener noreferrer" className="btn btn-outline">
               Take the Self-Assessment — $29
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ============ TESTIMONIALS ============ */}
+      <section className="section testimonials-section">
+        <div className="container">
+          <SectionHeader
+            eyebrow="What Our Clients Say"
+            title="Real results. Real founders."
+            description="Not theory — transformation."
+          />
+          <div className="testimonials-grid">
+            {testimonials.map((t, i) => (
+              <div key={i} className="testimonial-card glass-card slide-up" style={{ animationDelay: `${i * 0.1}s` }}>
+                <div className="testimonial-quote-mark">&ldquo;</div>
+                <div className="testimonial-stars">
+                  {[...Array(5)].map((_, s) => (
+                    <Star key={s} style={{ width: '0.85rem', height: '0.85rem', fill: 'var(--color-gold)', color: 'var(--color-gold)' }} />
+                  ))}
+                </div>
+                <p className="testimonial-text">{t.quote}</p>
+                <div className="testimonial-author">
+                  <div className="testimonial-name">{t.name}</div>
+                  <div className="testimonial-meta">{t.meta}</div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -291,11 +373,16 @@ export default function Home() {
         <div className="container" style={{ textAlign: 'center' }}>
           <h2 className="slide-up">Ready to stop doing this alone?</h2>
           <p className="slide-up" style={{ color: 'var(--text-secondary)', maxWidth: 600, margin: '1rem auto 2rem', fontSize: '1.1rem' }}>
-            Book a PRIDE Assessment call and we'll tell you exactly where you are, which tier fits you, and what your next 90 days should look like.
+            Book a PRIDE Assessment call and we&apos;ll tell you exactly where you are, which tier fits you, and what your next 90 days should look like.
           </p>
-          <a href="https://calendly.com/evolitepartners" target="_blank" rel="noopener noreferrer" className="btn btn-primary slide-up">
-            Book Your Assessment Call →
-          </a>
+          <div className="slide-up" style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <a href="https://calendly.com/evolitepartners" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+              Book Your Assessment Call →
+            </a>
+            <Link href="/services" className="btn btn-outline">
+              Explore Services
+            </Link>
+          </div>
         </div>
       </section>
     </div>

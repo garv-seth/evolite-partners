@@ -1,0 +1,210 @@
+/* ============================================
+   ABOUT PAGE
+   ============================================ */
+
+.about-hero-section {
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.about-hero-title {
+    font-family: var(--font-cinzel), 'Cinzel', serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    line-height: 1.25;
+    margin: 1rem auto;
+    max-width: 800px;
+}
+
+.about-hero-sub {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 640px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* ---- Founder Bio ---- */
+.founder-bio-section {
+    background: var(--bg-surface);
+}
+
+.founder-bio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.founder-bio-image-col {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.about-crest-wrap {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.about-crest-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+    filter: drop-shadow(0 8px 40px rgba(201, 168, 76, 0.15));
+}
+
+.credentials-card {
+    padding: 1.5rem 1.75rem;
+}
+
+.credential-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    padding: 0.55rem 0;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.83rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.credential-item:last-child {
+    border-bottom: none;
+}
+
+/* ---- Bio content ---- */
+.founder-bio-name {
+    font-family: var(--font-cinzel), 'Cinzel', serif;
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+    color: var(--text-primary);
+}
+
+.founder-title-label {
+    font-family: var(--font-cormorant), 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--color-gold);
+    font-size: 1.05rem;
+    margin-bottom: 1.75rem;
+    display: block;
+}
+
+.founder-bio-content p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.85;
+    margin-bottom: 1rem;
+}
+
+/* ---- Mission ---- */
+.mission-section {
+    background: var(--bg-primary);
+}
+
+.mission-inner {
+    text-align: center;
+    padding: 3rem 3.5rem;
+    max-width: 820px;
+    margin: 0 auto;
+}
+
+.mission-statement {
+    font-family: var(--font-cormorant), 'Cormorant Garamond', serif;
+    font-size: clamp(1.2rem, 2.5vw, 1.55rem);
+    font-style: italic;
+    line-height: 1.75;
+    color: var(--text-primary);
+}
+
+/* ---- Values ---- */
+.values-section {
+    background: var(--bg-surface);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.value-card {
+    padding: 2rem 2rem 1.75rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.value-bg-num {
+    position: absolute;
+    top: -0.75rem;
+    right: 1rem;
+    font-family: var(--font-cinzel), 'Cinzel', serif;
+    font-size: 5.5rem;
+    font-weight: 700;
+    color: var(--color-gold);
+    opacity: 0.05;
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+}
+
+.value-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-gold);
+    margin-bottom: 0.6rem;
+    position: relative;
+}
+
+.value-desc {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.75;
+    position: relative;
+}
+
+/* ---- CTA ---- */
+.about-cta-sub {
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 1rem auto 2rem;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.about-cta-btns {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 900px) {
+    .founder-bio-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .founder-bio-image-col {
+        max-width: 480px;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mission-inner {
+        padding: 2rem 1.5rem;
+    }
+
+    .mission-statement {
+        font-size: 1.1rem;
+    }
+}

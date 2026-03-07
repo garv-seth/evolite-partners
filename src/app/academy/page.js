@@ -2,6 +2,11 @@ import SectionHeader from "@/components/SectionHeader";
 import { IdCard, Shield, CircleDollarSign, Zap, Crown, Scale, ClipboardList, GraduationCap, BarChart, Book, Rocket, TrendingUp, CheckSquare, Star } from "lucide-react";
 import "./academy.css";
 
+export const metadata = {
+  title: "PRIDE Academy™ — Evolite Partners",
+  description: "Self-paced courses and frameworks for founders. PRIDE Self-Assessment, IRS Survival Guide, and more — built from 9 years of Fortune 500 finance.",
+};
+
 export default function Academy() {
     const levels = [
         { num: "01", icon: <IdCard className="w-5 h-5 text-gold" />, letter: "P — Protection", name: "Foundation", desc: "Business identity, ideal client avatar, 3-tier offer design, brand system. The most important level — everything else depends on this.", price: "$47", status: "🟢 Open Now · 27 Tasks", link: "https://evolitepartners.gumroad.com/l/pride-level-1-foundation" },
@@ -30,8 +35,8 @@ export default function Academy() {
                 <div className="container">
                     <SectionHeader
                         eyebrow="PRIDE Academy™"
-                        title={<>Build your business <em className="font-accent">level by level.</em></>}
-                        description="Five locked levels. Five certificates. One complete business. You cannot skip — every certificate is reviewed before the next level unlocks."
+                        title={<>Learn the system. <em className="font-accent">Own your business.</em></>}
+                        description="Self-paced courses, frameworks, and tools built from 9 years of Fortune 500 finance and 11 businesses of real-world experience."
                     />
 
                     <div className="academy-levels">
@@ -66,6 +71,35 @@ export default function Academy() {
                             <div className="entry-note">Both trackers together save $7</div>
                             <a href="https://evolitepartners.gumroad.com/l/pride-toolkit-bundle" target="_blank" rel="noopener noreferrer" className="btn btn-primary mt-4">
                                 Buy the Bundle →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* ============ COMING SOON ============ */}
+            <section className="section coming-soon-section">
+                <div className="container">
+                    <SectionHeader
+                        eyebrow="Coming Soon"
+                        title={<>More courses <em className="font-accent">in development.</em></>}
+                        description="Join the waitlist to be notified when these courses launch — and get early access pricing."
+                    />
+                    <div className="coming-soon-grid">
+                        <div className="coming-card glass-card">
+                            <div className="coming-badge">COMING SOON</div>
+                            <h3>Tax Strategy 101</h3>
+                            <p>A complete self-paced course on legal tax reduction for small business owners. Covers entity selection, deductions, quarterly taxes, and S-Corp strategies.</p>
+                            <a href="/contact" className="btn btn-outline btn-sm" style={{ marginTop: 'auto' }}>
+                                Join Waitlist →
+                            </a>
+                        </div>
+                        <div className="coming-card glass-card">
+                            <div className="coming-badge">COMING SOON</div>
+                            <h3>Import/Export for Beginners</h3>
+                            <p>A step-by-step guide to starting international trade: HTS codes, customs, suppliers, tariffs, and avoiding fraud. Based on KASHAKA™ operations.</p>
+                            <a href="/contact" className="btn btn-outline btn-sm" style={{ marginTop: 'auto' }}>
+                                Join Waitlist →
                             </a>
                         </div>
                     </div>

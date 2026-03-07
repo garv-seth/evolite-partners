@@ -2,38 +2,71 @@ import SectionHeader from "@/components/SectionHeader";
 import { MapPin, Globe, Zap, Lock, Handshake, Scale, Landmark, Calculator, FileSignature, Briefcase } from "lucide-react";
 import "./services.css";
 
+export const metadata = {
+  title: "Services & Pricing — Evolite Partners",
+  description: "Tax strategy, IRS resolution, import/export consulting, and business formation. Choose the tier that fits your stage — Foundation $499, Growth $1,499, Elite $3,999/month.",
+};
+
 export default function Services() {
     const tiers = [
         {
-            num: "TIER 1", name: "PRIDE Guided", price: "$499", period: "per month",
-            desc: "Weekly coaching calls. We walk beside you as you build your business one step at a time. Ideal for first-time founders who want expert direction without the full-service price tag.",
-            tags: ["Weekly Coaching", "PRIDE Roadmap", "Tax & Compliance Guidance", "Email Support"],
+            num: "TIER 1", name: "Foundation", price: "$499", period: "per month",
+            best: "Early-stage founders who need structure and guidance",
+            features: [
+                "1x monthly strategy call (60 min)",
+                "PRIDE phase assessment & roadmap",
+                "Tax planning guidance (not preparation)",
+                "Business structure review",
+                "Email support (48hr response)",
+                "Access to PRIDE Academy™ curriculum",
+                "Monthly resource drop (templates, checklists)",
+            ],
             cta: "https://calendly.com/evolitepartners"
         },
         {
-            num: "TIER 2", name: "PRIDE Partnered", price: "$1,299", period: "per month",
-            desc: "Bi-weekly deep dives with hands-on partner involvement. We don't just advise — we do the work with you. Tax strategy, entity structuring, compliance calendar, digital infrastructure setup.",
-            tags: ["Bi-Weekly Sessions", "Hands-On Support", "Tax Strategy", "Entity Structuring"],
-            cta: "https://calendly.com/evolitepartners"
-        },
-        {
-            num: "TIER 3", name: "Part-Time CFO", price: "$2,499", period: "per month",
-            desc: "We step into your business as your fractional CFO. Cash flow management, financial modeling, vendor negotiations, compliance oversight — the full financial stack handled by an expert who's run it before.",
-            tags: ["Fractional CFO", "Financial Modeling", "Compliance", "Vendor Negotiation"],
+            num: "TIER 2", name: "Growth", price: "$1,499", period: "per month",
+            best: "Established small businesses ready to optimize",
+            features: [
+                "Everything in Foundation, plus:",
+                "Federal & state tax strategy & preparation",
+                "Quarterly estimated tax management",
+                "IRS correspondence handling",
+                "Bookkeeping review & reconciliation",
+                "Entity structure optimization",
+                "2x strategy calls/month",
+                "Priority email + Slack support",
+            ],
             featured: true,
             cta: "https://calendly.com/evolitepartners"
         },
         {
-            num: "TIER 4", name: "Done-For-You", price: "$3,999", period: "per month",
-            desc: "We handle it. Filing, strategy, compliance, supplier sourcing, digital infrastructure, marketing systems — you run your business, we handle the rest. For entrepreneurs who can't afford to lose time.",
-            tags: ["Full Execution", "All Compliance", "Monthly Reports", "Priority Access"],
+            num: "TIER 3", name: "Elite", price: "$3,999", period: "per month",
+            best: "Growing companies who want full done-for-you support",
+            features: [
+                "Everything in Growth, plus:",
+                "Full-service bookkeeping & payroll",
+                "Import/Export & tariff consulting",
+                "KASHAKA™ supplier network access",
+                "Legal entity filing & maintenance",
+                "Marketing strategy support",
+                "Fractional CFO advisory",
+                "Unlimited calls & direct access to Shhally",
+                "Annual financial review & plan",
+            ],
             cta: "https://calendly.com/evolitepartners"
         },
         {
-            num: "TIER 5", name: "Enterprise / Custom", price: "$9K–$25K", period: "per month",
-            desc: "Multi-entity structures, cross-border trade programs, full-scale financial operations, team training, and custom international engagements. For businesses operating at scale or expanding globally.",
-            tags: ["Multi-Entity", "International", "Team Training", "Custom Scope"],
-            cta: "mailto:prideinpreparation@gmail.com"
+            num: "ENTERPRISE", name: "Enterprise", price: "$9K–$25K", period: "per month",
+            best: "Multi-entity businesses, international expansion, high-volume trade",
+            features: [
+                "Custom scope — contact us for a tailored proposal",
+                "Multi-entity structures",
+                "Cross-border trade programs",
+                "Full-scale financial operations",
+                "Team training",
+                "Custom international engagements",
+            ],
+            cta: "mailto:shhally@evolitepartners.com"
         },
     ];
 
@@ -94,15 +127,15 @@ export default function Services() {
                                     <span className="tier-price font-accent">{tier.price}</span>
                                     <span className="tier-period">{tier.period}</span>
                                 </div>
-                                <p className="tier-desc">{tier.desc}</p>
-                                <div className="tier-tags">
-                                    {tier.tags.map((tag, j) => (
-                                        <span key={j} className="tier-tag">{tag}</span>
+                                <p className="tier-best">Best for: {tier.best}</p>
+                                <ul className="tier-features">
+                                    {tier.features.map((f, j) => (
+                                        <li key={j} className={f.endsWith(':') ? 'tier-feature-header' : ''}>{f}</li>
                                     ))}
-                                </div>
+                                </ul>
                                 <a href={tier.cta} target="_blank" rel="noopener noreferrer"
                                     className={`btn w-full mt-8 ${tier.featured ? 'btn-primary' : 'btn-outline'}`}>
-                                    {tier.num === "TIER 5" ? "Contact Us →" : "Book Intro →"}
+                                    {tier.num === "ENTERPRISE" ? "Contact Us →" : "Book Intro →"}
                                 </a>
                             </div>
                         ))}
@@ -222,7 +255,7 @@ export default function Services() {
                         <div className="partner-cta-card glass">
                             <h4>Are you a professional?</h4>
                             <p>If you refer clients to Evolite Partners, we prepare before every call, protect your client relationship, and deliver results you can put your name behind.</p>
-                            <a href="mailto:prideinpreparation@gmail.com">Partner with us →</a>
+                            <a href="mailto:shhally@evolitepartners.com">Partner with us →</a>
                         </div>
                         <div className="partner-cta-card glass">
                             <h4>Were you referred here?</h4>

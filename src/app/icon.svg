@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="5" fill="#0D0D1A"/>
+  <!-- Vertical stroke -->
+  <rect x="7" y="7" width="4" height="18" fill="#C9A84C"/>
+  <!-- Top bar -->
+  <rect x="7" y="7" width="16" height="4" fill="#C9A84C"/>
+  <!-- Middle bar (shorter — classic E proportion) -->
+  <rect x="7" y="14" width="12" height="4" fill="#C9A84C"/>
+  <!-- Bottom bar -->
+  <rect x="7" y="21" width="16" height="4" fill="#C9A84C"/>
+  <!-- Accent diamond tip on middle bar -->
+  <rect x="18.2" y="15.2" width="2.8" height="2.8" transform="rotate(45 19.6 16.6)" fill="#C9A84C"/>
+</svg>

@@ -94,28 +94,54 @@
     color: var(--text-secondary);
 }
 
-.tier-desc {
-    font-size: 0.85rem;
-    color: var(--text-secondary);
-    line-height: 1.7;
-    margin-bottom: 1.5rem;
+.tier-best {
+    font-size: 0.78rem;
+    color: var(--color-gold);
+    font-style: italic;
+    margin-bottom: 1.25rem;
+    opacity: 0.85;
+}
+
+.tier-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0.5rem;
     flex: 1;
 }
 
-.tier-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-bottom: 0.5rem;
+.tier-features li {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    padding: 0.3rem 0 0.3rem 1.1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    position: relative;
 }
 
-.tier-tag {
-    font-size: 0.68rem;
-    padding: 4px 10px;
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-    color: var(--text-secondary);
-    letter-spacing: 0.05em;
+.tier-features li:last-child {
+    border-bottom: none;
+}
+
+.tier-features li::before {
+    content: '·';
+    position: absolute;
+    left: 0;
+    color: var(--color-gold);
+    font-weight: 700;
+}
+
+.tier-features li.tier-feature-header {
+    font-weight: 600;
+    color: var(--text-primary);
+    padding-left: 0;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    border-bottom: 1px solid rgba(201,168,76,0.15);
+    margin-top: 0.25rem;
+}
+
+.tier-features li.tier-feature-header::before {
+    display: none;
 }
 
 .tier-note {
