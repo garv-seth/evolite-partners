@@ -38,6 +38,7 @@ export default function Contact() {
                     interest: form.interest,
                     revenue: form.revenue,
                     message: form.message,
+                    _hp: "", // honeypot — always empty for real users
                 }),
             });
 
@@ -81,7 +82,7 @@ export default function Contact() {
                                 <div>
                                     <h4>Direct Communication</h4>
                                     <p>For document submission or existing client support.</p>
-                                    <a href="mailto:prideinpreparation@gmail.com" className="info-link">prideinpreparation@gmail.com</a>
+                                    <a href="mailto:shhally@evolitepartners.com" className="info-link">shhally@evolitepartners.com</a>
                                 </div>
                             </div>
 
@@ -214,7 +215,7 @@ export default function Contact() {
                                 {status === "error" && (
                                     <div className="form-error">
                                         <AlertCircle className="w-5 h-5" style={{ flexShrink: 0 }} />
-                                        <span>Something went wrong. Please email us directly at <a href="mailto:prideinpreparation@gmail.com">prideinpreparation@gmail.com</a></span>
+                                        <span>Something went wrong. Please email us directly at <a href="mailto:shhally@evolitepartners.com">shhally@evolitepartners.com</a></span>
                                     </div>
                                 )}
 

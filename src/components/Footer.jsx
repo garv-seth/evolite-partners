@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { MapPin, Linkedin, Instagram } from 'lucide-react';
+import { MapPin, Linkedin } from 'lucide-react';
 import './Footer.css';
 
 export default function Footer() {
@@ -55,12 +55,15 @@ export default function Footer() {
                             <MapPin style={{ display: 'inline', width: '0.85rem', height: '0.85rem', verticalAlign: 'middle', marginRight: '4px', marginBottom: '1px' }} />
                             Washington State · Nationwide · International
                         </span>
-                        <div className="footer-social">
-                            <a href="#" aria-label="LinkedIn" className="social-icon" rel="noopener noreferrer">
-                                <Linkedin style={{ width: '1rem', height: '1rem' }} />
-                                <span>LinkedIn</span>
-                            </a>
-                        </div>
+                        {/* TODO: replace LINKEDIN_URL with actual profile URL */}
+                        {process.env.NEXT_PUBLIC_LINKEDIN_URL && (
+                            <div className="footer-social">
+                                <a href={process.env.NEXT_PUBLIC_LINKEDIN_URL} aria-label="LinkedIn" className="social-icon" target="_blank" rel="noopener noreferrer">
+                                    <Linkedin style={{ width: '1rem', height: '1rem' }} />
+                                    <span>LinkedIn</span>
+                                </a>
+                            </div>
+                        )}
                     </div>
                 </div>
 

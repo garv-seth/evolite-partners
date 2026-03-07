@@ -34,15 +34,24 @@ function esc(str) {
 
 export async function POST(req) {
   try {
-    // CSRF: only accept requests from our own origin
+    // CSRF: require Origin header and validate it matches our domain
     const origin = req.headers.get("origin") || "";
     const host = req.headers.get("host") || "";
-    if (origin && !origin.includes(host) && !origin.includes("evolitepartners.com") && !origin.includes("localhost")) {
+    const isAllowedOrigin =
+      origin.includes("evolitepartners.com") ||
+      origin.includes("localhost") ||
+      origin.includes("127.0.0.1");
+    if (!isAllowedOrigin) {
       return Response.json({ error: "Forbidden." }, { status: 403 });
     }
 
     const body = await req.json();
-    const { firstName, lastName, email, interest, revenue, message } = body;
+    const { firstName, lastName, email, interest, revenue, message, _hp } = body;
+
+    // Honeypot — bots fill this hidden field, humans don't
+    if (_hp) {
+      return Response.json({ success: true }); // silently discard
+    }
 
     // Required field check
     if (!firstName || !email || !interest || !message) {
