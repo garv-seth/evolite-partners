@@ -26,6 +26,9 @@ export default function Navbar() {
         { href: '/contact', label: 'Contact' },
     ];
 
+    const PHONE = process.env.NEXT_PUBLIC_CONTACT_PHONE || '+14253807110';
+    const PHONE_DISPLAY = '(425) 380-7110';
+
     return (
         <nav className={`floating-nav ${scrolled ? 'scrolled' : ''}`}>
             <div className="nav-inner">
@@ -47,6 +50,13 @@ export default function Navbar() {
                             {link.label}
                         </Link>
                     ))}
+                    <a
+                        href={`tel:${PHONE}`}
+                        className="nav-phone"
+                        onClick={() => setMobileOpen(false)}
+                    >
+                        {PHONE_DISPLAY}
+                    </a>
                     <a
                         href="https://calendly.com/evolitepartners"
                         target="_blank"

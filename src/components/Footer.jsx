@@ -51,6 +51,7 @@ export default function Footer() {
                     <div className="footer-links-group">
                         <h4>Connect</h4>
                         <a href="https://calendly.com/evolitepartners" target="_blank" rel="noopener noreferrer">Book a Call →</a>
+                        <a href="tel:+14253807110" className="footer-phone">(425) 380-7110</a>
                         <a href="mailto:shhally@evolitepartners.com">shhally@evolitepartners.com</a>
                         <span className="footer-location">
                             <MapPin style={{ display: 'inline', width: '0.85rem', height: '0.85rem', verticalAlign: 'middle', marginRight: '4px', marginBottom: '1px' }} />
