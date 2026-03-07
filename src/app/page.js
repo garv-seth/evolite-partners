@@ -1,79 +1,81 @@
-'use client';
 import Link from "next/link";
 import Image from "next/image";
 import { ClipboardCheck, CircleDollarSign, Scale, Globe, Megaphone, Target, Star, Check, X } from "lucide-react";
-import { useState } from "react";
-import { motion } from "framer-motion";
 import SectionHeader from "@/components/SectionHeader";
 import InfiniteGridHero from "@/components/InfiniteGridHero";
+import HeroCrest from "@/components/HeroCrest";
+import FaqAccordion from "@/components/FaqAccordion";
 import "./page.css";
 
+export const metadata = {
+  title: "Evolite Partners — Evolution to Elite™",
+  description: "Tax strategy, IRS resolution, import/export consulting, and business formation for founders. Built from 11 businesses and 9 years of Fortune 500 finance. Washington State & Nationwide.",
+};
+
+const painPoints = [
+  { icon: <ClipboardCheck className="w-8 h-8 text-gold" />, title: "Compliance & Filing", desc: "Business licenses. State registrations. Annual reports. Sales tax permits. Federal filings. Quarterly estimated taxes. Every state has different rules — and every missed deadline has a penalty." },
+  { icon: <CircleDollarSign className="w-8 h-8 text-gold" />, title: "Finance & Accounting", desc: "Bookkeeping. Cash flow management. Profit & loss. Balance sheets. Payroll. Invoicing. Payment processing. You're doing CFO-level work without CFO-level training — because you can't afford one yet." },
+  { icon: <Scale className="w-8 h-8 text-gold" />, title: "Legal & Entity Structure", desc: "LLC vs S-Corp vs C-Corp. Operating agreements. Registered agents. EIN. Contracts. Liability protection. One wrong structure can cost you thousands in taxes or leave you personally exposed." },
+  { icon: <Globe className="w-8 h-8 text-gold" />, title: "Digital Infrastructure", desc: "Website. Domain. Hosting. Business email. CRM. Automations. Sales funnels. Landing pages. Analytics. You need all of it — and nobody teaches you how it connects." },
+  { icon: <Megaphone className="w-8 h-8 text-gold" />, title: "Marketing & Acquisition", desc: "Brand strategy. Content creation. Social media. LinkedIn positioning. Lead generation. Ads. SEO. Referral programs. Everyone says 'just post more' — but nobody tells you what actually converts." },
+  { icon: <Target className="w-8 h-8 text-gold" />, title: "Strategy & Growth", desc: "Market research. Competitive analysis. Pricing strategy. Expansion planning. Partnership development. Hiring. Scaling. You know you need a plan — but the plan itself takes weeks to build alone." },
+];
+
+const pridePhases = [
+  { letter: "P", word: "Protection", desc: "Entity structure, EIN, legal foundation. Before you earn, you must protect. The right structure saves thousands and shields you personally." },
+  { letter: "R", word: "Revenue", desc: "Pricing systems, payment processing, income streams. Revenue is not just sales — it's architecture. We help you build income that scales." },
+  { letter: "I", word: "Integration", desc: "Accounting, taxes, compliance, bookkeeping. Integration means your numbers talk to each other. No gaps, no surprises, no penalties." },
+  { letter: "D", word: "Domination", desc: "Brand, visibility, marketing, authority. You can't grow what no one knows about. We put your business in front of the right people." },
+  { letter: "E", word: "Evolution", desc: "Scale, legacy, expansion. Evolution is the destination. Bigger markets. Stronger systems. A business that outlasts you." },
+];
+
+const steps = [
+  { num: "01", title: "Free Assessment Call", desc: "30 minutes. We learn your situation — tax, IRS, trade, or business formation. No charge, no obligation. We tell you exactly where you are." },
+  { num: "02", title: "Your PRIDE Map", desc: "We identify your PRIDE phase, which tier fits your situation, and what your next 90 days should look like — in priority order." },
+  { num: "03", title: "We Execute Together", desc: "Done-for-you, coaching, or self-paced Academy. We meet you where you are — and we don't stop until the work is complete." },
+  { num: "04", title: "Elite Results", desc: "Tax optimized. IRS resolved. Trade compliant. Business properly structured. That is Elite status — earned, not given." },
+];
+
+const testimonials = [
+  {
+    quote: "Before Evolite, I was paying $8,000 more in taxes every year because my entity was wrong. Shhally fixed my structure, filed back corrections, and saved me money I didn't know I was losing.",
+    name: "Client Name",
+    meta: "Business Type · State",
+  },
+  {
+    quote: "I got an IRS notice and panicked. Shhally not only explained exactly what it meant, he resolved it in 3 weeks. I didn't have to talk to the IRS once.",
+    name: "Client Name",
+    meta: "Business Type · State",
+  },
+  {
+    quote: "I'm based in India and wanted to open a US LLC. Most people couldn't help me. Evolite handled everything — EIN, registered agent, bank setup. Done in 2 weeks.",
+    name: "Client Name",
+    meta: "International Client",
+  },
+];
+
+const comparisonRows = [
+  { feature: "Proactive tax strategy", others: "Reactive only", us: "Year-round planning" },
+  { feature: "IRS resolution support", others: "Refer out", us: "Handled in-house" },
+  { feature: "Import/Export & tariffs", others: "Not offered", us: "KASHAKA™ network" },
+  { feature: "PRIDE Framework", others: "No system", us: "5-phase roadmap" },
+  { feature: "Founder-to-founder guidance", others: "Corporate playbook", us: "11 businesses lived" },
+  { feature: "Multi-language support", others: "English only", us: "EN · HI · UR · PB" },
+  { feature: "International US LLC setup", others: "Rarely", us: "Fully supported" },
+];
+
+const faqs = [
+  { q: "Do I need to have a tax problem to work with you?", a: "Not at all. Most of our clients come to us in perfectly normal situations — they want to pay less in taxes legally, structure their business correctly, understand tariffs, or prepare before a problem happens. You don't need to be in trouble to benefit from strategy. In fact, the best time to call us is before there's a problem." },
+  { q: "How much do your services cost?", a: "Our tiers range from $499/month for guided coaching up to $3,999/month for Done-For-You services and $9K–$25K/month for enterprise engagements. Every engagement starts with a free assessment call. We scope the work together and give you a clear number before anything begins. No surprises." },
+  { q: "I received an IRS notice. What should I do right now?", a: "First — don't panic, and don't ignore it. Most IRS notices are not audits. Check the notice number (top right corner) and the deadline (typically 30–60 days). Then book a free call with us — we'll identify the notice type, explain exactly what it means, and tell you precisely what to do next. You can also download the IRS Survival Guide™ ($37) at our Gumroad store for an immediate start." },
+  { q: "What is KASHAKA™ and how does it help me?", a: "KASHAKA™ is Shhally Sharma's import/export company and global supplier network — active since 2021 across the US, Dubai, China, India, and Africa. When you work with Evolite Partners on trade consulting, you get access to verified suppliers, tariff navigation from someone who has personally cleared customs, and fraud protection built on real experience." },
+  { q: "What is the PRIDE Framework and who is it for?", a: "PRIDE stands for Protection, Revenue, Integration, Domination, Evolution. It is the five-phase system we use to assess and grow every business we work with — from a first-year startup to a multi-million dollar operation. It gives your business a clear position, a clear gap, and a clear next step." },
+  { q: "Can you help international entrepreneurs set up US businesses?", a: "Yes. We form US entities (LLC, S-Corp, C-Corp) for clients in any state — including international entrepreneurs who want US business infrastructure. We handle EIN, registered agent, operating agreements, and banking setup. Shhally Sharma speaks English, Hindi, Urdu, and Punjabi and has deep roots in India and the UAE." },
+  { q: "Do you work with businesses outside Washington State?", a: "Yes — we work with clients nationwide and internationally. Our compliance work covers all 50 states and we handle federal tax strategy for clients anywhere in the country. Location is no barrier." },
+  { q: "What if I just want help with one thing, like my taxes?", a: "That's completely fine. You can start with a single service — tax strategy, IRS resolution, business formation, or trade consulting — and scale up only when it makes sense for you. We don't require long-term contracts to get started." },
+];
+
 export default function Home() {
-  const [openFaq, setOpenFaq] = useState(null);
-
-  const painPoints = [
-    { icon: <ClipboardCheck className="w-8 h-8 text-gold" />, title: "Compliance & Filing", desc: "Business licenses. State registrations. Annual reports. Sales tax permits. Federal filings. Quarterly estimated taxes. Every state has different rules — and every missed deadline has a penalty." },
-    { icon: <CircleDollarSign className="w-8 h-8 text-gold" />, title: "Finance & Accounting", desc: "Bookkeeping. Cash flow management. Profit & loss. Balance sheets. Payroll. Invoicing. Payment processing. You're doing CFO-level work without CFO-level training — because you can't afford one yet." },
-    { icon: <Scale className="w-8 h-8 text-gold" />, title: "Legal & Entity Structure", desc: "LLC vs S-Corp vs C-Corp. Operating agreements. Registered agents. EIN. Contracts. Liability protection. One wrong structure can cost you thousands in taxes or leave you personally exposed." },
-    { icon: <Globe className="w-8 h-8 text-gold" />, title: "Digital Infrastructure", desc: "Website. Domain. Hosting. Business email. CRM. Automations. Sales funnels. Landing pages. Analytics. You need all of it — and nobody teaches you how it connects." },
-    { icon: <Megaphone className="w-8 h-8 text-gold" />, title: "Marketing & Acquisition", desc: "Brand strategy. Content creation. Social media. LinkedIn positioning. Lead generation. Ads. SEO. Referral programs. Everyone says 'just post more' — but nobody tells you what actually converts." },
-    { icon: <Target className="w-8 h-8 text-gold" />, title: "Strategy & Growth", desc: "Market research. Competitive analysis. Pricing strategy. Expansion planning. Partnership development. Hiring. Scaling. You know you need a plan — but the plan itself takes weeks to build alone." },
-  ];
-
-  const pridePhases = [
-    { letter: "P", word: "Protection", desc: "Entity, EIN, legal structure. Your foundation." },
-    { letter: "R", word: "Revenue", desc: "Payments, pricing, income systems." },
-    { letter: "I", word: "Integration", desc: "Accounting, taxes, compliance." },
-    { letter: "D", word: "Domination", desc: "Brand, market authority, visibility." },
-    { letter: "E", word: "Evolution", desc: "Scale, expand, build legacy. Elite." },
-  ];
-
-  const steps = [
-    { num: "01", title: "Free Assessment Call", desc: "30 minutes. We learn your situation — tax, IRS, trade, or business formation. No charge, no obligation. We tell you exactly where you are." },
-    { num: "02", title: "Your PRIDE Map", desc: "We identify your PRIDE phase, which tier fits your situation, and what your next 90 days should look like — in priority order." },
-    { num: "03", title: "We Execute Together", desc: "Done-for-you, coaching, or self-paced Academy. We meet you where you are — and we don't stop until the work is complete." },
-    { num: "04", title: "Elite Results", desc: "Tax optimized. IRS resolved. Trade compliant. Business properly structured. That is Elite status — earned, not given." },
-  ];
-
-  const testimonials = [
-    {
-      quote: "Before Evolite, I was paying $8,000 more in taxes every year because my entity was wrong. Shhally fixed my structure, filed back corrections, and saved me money I didn't know I was losing.",
-      name: "Client Name",
-      meta: "Business Type · State",
-    },
-    {
-      quote: "I got an IRS notice and panicked. Shhally not only explained exactly what it meant, he resolved it in 3 weeks. I didn't have to talk to the IRS once.",
-      name: "Client Name",
-      meta: "Business Type · State",
-    },
-    {
-      quote: "I'm based in India and wanted to open a US LLC. Most people couldn't help me. Evolite handled everything — EIN, registered agent, bank setup. Done in 2 weeks.",
-      name: "Client Name",
-      meta: "International Client",
-    },
-  ];
-
-  const comparisonRows = [
-    { feature: "Proactive tax strategy", others: "Reactive only", us: "Year-round planning" },
-    { feature: "IRS resolution support", others: "Refer out", us: "Handled in-house" },
-    { feature: "Import/Export & tariffs", others: "Not offered", us: "KASHAKA™ network" },
-    { feature: "PRIDE Framework", others: "No system", us: "5-phase roadmap" },
-    { feature: "Founder-to-founder guidance", others: "Corporate playbook", us: "11 businesses lived" },
-    { feature: "Multi-language support", others: "English only", us: "EN · HI · UR · PB" },
-    { feature: "International US LLC setup", others: "Rarely", us: "Fully supported" },
-  ];
-
-  const faqs = [
-    { q: "Do I need to have a tax problem to work with you?", a: "Not at all. Most of our clients come to us in perfectly normal situations — they want to pay less in taxes legally, structure their business correctly, understand tariffs, or prepare before a problem happens. You don't need to be in trouble to benefit from strategy. In fact, the best time to call us is before there's a problem." },
-    { q: "How much do your services cost?", a: "Our tiers range from $499/month for guided coaching up to $3,999/month for Done-For-You services and $9K–$25K/month for enterprise engagements. Every engagement starts with a free assessment call. We scope the work together and give you a clear number before anything begins. No surprises." },
-    { q: "I received an IRS notice. What should I do right now?", a: "First — don't panic, and don't ignore it. Most IRS notices are not audits. Check the notice number (top right corner) and the deadline (typically 30–60 days). Then book a free call with us — we'll identify the notice type, explain exactly what it means, and tell you precisely what to do next. You can also download the IRS Survival Guide™ ($37) at our Gumroad store for an immediate start." },
-    { q: "What is KASHAKA™ and how does it help me?", a: "KASHAKA™ is Shhally Sharma's import/export company and global supplier network — active since 2021 across the US, Dubai, China, India, and Africa. When you work with Evolite Partners on trade consulting, you get access to verified suppliers, tariff navigation from someone who has personally cleared customs, and fraud protection built on real experience." },
-    { q: "What is the PRIDE Framework and who is it for?", a: "PRIDE stands for Protection, Revenue, Integration, Domination, Evolution. It is the five-phase system we use to assess and grow every business we work with — from a first-year startup to a multi-million dollar operation. It gives your business a clear position, a clear gap, and a clear next step." },
-    { q: "Can you help international entrepreneurs set up US businesses?", a: "Yes. We form US entities (LLC, S-Corp, C-Corp) for clients in any state — including international entrepreneurs who want US business infrastructure. We handle EIN, registered agent, operating agreements, and banking setup. Shhally Sharma speaks English, Hindi, Urdu, and Punjabi and has deep roots in India and the UAE." },
-    { q: "Do you work with businesses outside Washington State?", a: "Yes — we work with clients nationwide and internationally. Our compliance work covers all 50 states and we handle federal tax strategy for clients anywhere in the country. Location is no barrier." },
-    { q: "What if I just want help with one thing, like my taxes?", a: "That's completely fine. You can start with a single service — tax strategy, IRS resolution, business formation, or trade consulting — and scale up only when it makes sense for you. We don't require long-term contracts to get started." },
-  ];
-
   return (
     <div className="home-page">
 
@@ -83,11 +85,11 @@ export default function Home() {
           <div className="hero-content">
             <div className="hero-badge slide-up">
               <span className="badge-dot"></span>
-              Now Accepting New Clients
+              Now Accepting New Clients · Washington State &amp; Nationwide
             </div>
             <h1 className="hero-title slide-up">
               Your Business Deserves an<br />
-              <em className="font-accent">Evolution to Elite.</em>
+              <em className="font-accent">Evolution to Elite.™</em>
             </h1>
             <p className="hero-desc slide-up">
               Tax strategy. IRS resolution. Tariff navigation. Import/Export. Business formation.
@@ -121,57 +123,7 @@ export default function Home() {
           </div>
 
           <div className="hero-visual">
-            <div className="hero-crest-visual">
-
-              {/* Orbital rings — CSS animated, behind everything */}
-              <div className="hcv-ring hcv-ring-1" />
-              <div className="hcv-ring hcv-ring-2" />
-
-              {/* Crest — centered by flexbox, no transform conflict */}
-              <motion.div
-                className="hcv-crest"
-                animate={{ y: [0, -12, 0] }}
-                transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-              >
-                <Image
-                  src="/crest.jpeg"
-                  alt="Evolite Partners Crest"
-                  width={260}
-                  height={260}
-                  className="hcv-crest-img"
-                  priority
-                />
-              </motion.div>
-
-              {/* Stat badges — absolute at the four corners */}
-              <motion.div className="hcv-badge hcv-badge-tl"
-                animate={{ y: [0, -7, 0] }}
-                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}>
-                <div className="hcv-num">11</div>
-                <div className="hcv-label">Businesses Built</div>
-              </motion.div>
-
-              <motion.div className="hcv-badge hcv-badge-tr"
-                animate={{ y: [0, 8, 0] }}
-                transition={{ duration: 6.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}>
-                <div className="hcv-num">10<span className="hcv-plus">+</span></div>
-                <div className="hcv-label">Countries Active</div>
-              </motion.div>
-
-              <motion.div className="hcv-badge hcv-badge-bl"
-                animate={{ y: [0, -6, 0] }}
-                transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}>
-                <div className="hcv-num">9<span className="hcv-unit">Yrs</span></div>
-                <div className="hcv-label">Fortune 500</div>
-              </motion.div>
-
-              <motion.div className="hcv-badge hcv-badge-br"
-                animate={{ y: [0, 6, 0] }}
-                transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}>
-                <div className="hcv-pride">P·R·I·D·E</div>
-                <div className="hcv-label">Framework™</div>
-              </motion.div>
-            </div>
+            <HeroCrest />
           </div>
         </div>
       </InfiniteGridHero>
@@ -208,6 +160,7 @@ export default function Home() {
                   width={340}
                   height={340}
                   className="founder-crest-img"
+                  sizes="(max-width: 768px) 260px, 340px"
                 />
                 <span className="founder-name-label">Shhally Sharma</span>
               </div>
@@ -215,7 +168,7 @@ export default function Home() {
             <div className="founder-content slide-up">
               <div className="eyebrow">The Founder</div>
               <h2>Built from experience.<br /><em className="font-accent">Not theory.</em></h2>
-              <p>Shhally didn't go to law school first. He started 11 businesses — and made every mistake a founder can make with taxes, compliance, legal structure, and money. Then he spent 9 years in Fortune 500 financial operations learning how the system actually works from the inside.</p>
+              <p>Shhally didn&apos;t go to consulting school first. He started 11 businesses — and made every mistake a founder can make with taxes, compliance, legal structure, and money. Then he spent 9 years in Fortune 500 financial operations learning how the system actually works from the inside.</p>
               <p>He speaks English, Hindi, Urdu, and Punjabi. He has family in the US and India, active trade relationships across 10+ countries, and a personal understanding of what it means to build something from nothing — twice.</p>
               <p>Evolite Partners exists because Shhally wished someone like this existed when he started. Now he is that person — for you.</p>
               <a href="https://calendly.com/evolitepartners" target="_blank" rel="noopener noreferrer" className="btn btn-primary mt-8">
@@ -352,19 +305,7 @@ export default function Home() {
             eyebrow="Common Questions"
             title="Questions We Hear Every Day"
           />
-          <div className="faq-list">
-            {faqs.map((faq, i) => (
-              <div key={i} className={`faq-item glass-card ${openFaq === i ? 'open' : ''}`}>
-                <button className="faq-question" onClick={() => setOpenFaq(openFaq === i ? null : i)}>
-                  <span>{faq.q}</span>
-                  <span className="faq-arrow">{openFaq === i ? '▴' : '▾'}</span>
-                </button>
-                <div className="faq-answer">
-                  <p>{faq.a}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <FaqAccordion faqs={faqs} />
         </div>
       </section>
 
@@ -385,6 +326,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
     </div>
   );
 }

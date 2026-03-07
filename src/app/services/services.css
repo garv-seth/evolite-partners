@@ -391,16 +391,6 @@
     }
 }
 
-/* Force single column before auto-fit tries 2-col (prevents cramped cards) */
-@media (max-width: 580px) {
-    .tiers-grid {
-        grid-template-columns: 1fr !important;
-        max-width: 420px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
 @media (max-width: 768px) {
     .tiers-grid {
         grid-template-columns: 1fr;

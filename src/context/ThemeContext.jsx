@@ -6,40 +6,23 @@ const ThemeContext = createContext();
 
 export function ThemeProvider({ children }) {
     const [theme, setTheme] = useState("dark");
-    const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
-        // Only access localStorage after mount to prevent hydration mismatch
-        setMounted(true);
         const savedTheme = localStorage.getItem("theme");
-        if (savedTheme) {
-            setTheme(savedTheme);
-        } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-            setTheme("dark");
-        } else {
-            setTheme("light");
-        }
+        const preferred = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        const resolved = savedTheme || preferred;
+        setTheme(resolved);
+        document.documentElement.setAttribute("data-theme", resolved);
     }, []);
 
-    useEffect(() => {
-        if (mounted) {
-            document.documentElement.setAttribute("data-theme", theme);
-            localStorage.setItem("theme", theme);
-        }
-    }, [theme, mounted]);
-
     const toggleTheme = () => {
-        setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+        setTheme((prev) => {
+            const next = prev === "light" ? "dark" : "light";
+            document.documentElement.setAttribute("data-theme", next);
+            localStorage.setItem("theme", next);
+            return next;
+        });
     };
-
-    if (!mounted) {
-        // Prevent flash of incorrect theme
-        return (
-            <ThemeContext.Provider value={{ theme, toggleTheme }}>
-                <div style={{ visibility: "hidden" }}>{children}</div>
-            </ThemeContext.Provider>
-        );
-    }
 
     return (
         <ThemeContext.Provider value={{ theme, toggleTheme }}>

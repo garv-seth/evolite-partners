@@ -14,6 +14,7 @@ export default function Footer() {
                         width={110}
                         height={110}
                         className="footer-crest-img"
+                        sizes="110px"
                     />
                 </div>
 

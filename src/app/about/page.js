@@ -68,6 +68,7 @@ export default function About() {
                   width={400}
                   height={400}
                   className="about-crest-img"
+                  sizes="(max-width: 900px) 100vw, 400px"
                 />
               </div>
               <div className="credentials-card glass-card">

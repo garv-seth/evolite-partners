@@ -37,6 +37,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Set theme synchronously before paint to eliminate flash */}
+        <script dangerouslySetInnerHTML={{ __html: `try{var t=localStorage.getItem('theme')||((window.matchMedia('(prefers-color-scheme:dark)').matches)?'dark':'light');document.documentElement.setAttribute('data-theme',t)}catch(e){}` }} />
+      </head>
       <body className={`${outfit.variable} ${cinzel.variable} ${cormorant.variable}`}>
         <ThemeProvider>
           <Navbar />
