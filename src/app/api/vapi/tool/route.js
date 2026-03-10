@@ -100,7 +100,7 @@ export async function POST(req) {
 
           // 1. Email to caller with Calendly scheduling link
           const callerEmailResult = await resend.emails.send({
-            from: "Evolite Partners <onboarding@resend.dev>",
+            from: process.env.RESEND_FROM ?? "Evolite Partners <contact@evolitepartners.com>",
             to: [callerEmail],
             subject: "Your Evolite Partners PRIDE Assessment — Schedule Your Call",
             html: `
@@ -138,7 +138,7 @@ export async function POST(req) {
 
           // 2. Lead notification email to Shhally
           await resend.emails.send({
-            from: "Evolite Voice Agent <onboarding@resend.dev>",
+            from: process.env.RESEND_FROM_JADE ?? "Jade — Evolite Partners <jade@evolitepartners.com>",
             to: [process.env.CONTACT_TO_EMAIL ?? "shhally@evolitepartners.com"],
             subject: `[${urg.label}] New Phone Lead — ${esc(callerName || "Unknown")} · ${esc(primaryNeed || "General")}`,
             html: `

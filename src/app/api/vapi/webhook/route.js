@@ -57,7 +57,7 @@ export async function POST(req) {
     const resend = new Resend(process.env.RESEND_API_KEY);
 
     await resend.emails.send({
-      from: "Evolite Voice Agent <onboarding@resend.dev>",
+      from: process.env.RESEND_FROM_JADE ?? "Jade — Evolite Partners <jade@evolitepartners.com>",
       to: [process.env.CONTACT_TO_EMAIL ?? "shhally@evolitepartners.com"],
       subject: `Call Summary — ${esc(callerPhone)} · ${new Date().toLocaleDateString("en-US", { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" })}`,
       html: `

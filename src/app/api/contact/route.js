@@ -84,7 +84,7 @@ export async function POST(req) {
     const resend = new Resend(process.env.RESEND_API_KEY);
 
     const { error } = await resend.emails.send({
-      from: "Evolite Partners <onboarding@resend.dev>",
+      from: process.env.RESEND_FROM ?? "Evolite Partners <contact@evolitepartners.com>",
       to: [process.env.CONTACT_TO_EMAIL || "shhally@evolitepartners.com"],
       replyTo: email,
       subject: `New Inquiry — Evolite Partners | ${esc(interest)}`,
