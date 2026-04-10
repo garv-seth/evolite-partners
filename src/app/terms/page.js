@@ -52,19 +52,20 @@ export default function TermsOfService() {
               <li>Consulting engagements may require a deposit before work begins</li>
               <li>Late payments may result in suspension of services</li>
             </ul>
-            <p>Refund requests for services will be evaluated on a case-by-case basis. Contact us at <a href="mailto:shhally@evolitepartners.com">shhally@evolitepartners.com</a> with any billing concerns.</p>
+            <p>Refund requests for services will be evaluated on a case-by-case basis. Contact us at <a href="mailto:hello@evolitepartners.com">hello@evolitepartners.com</a> with any billing concerns.</p>
           </section>
 
           <section className="legal-section">
             <h2>5. Intellectual Property</h2>
             <p>All content on this Site — including but not limited to text, graphics, logos, images, and the overall design — is the property of Evolite Partners LLC and is protected by applicable copyright and trademark laws.</p>
-            <p>The following are registered or common law trademarks of Evolite Partners LLC:</p>
+            <p>The following are proprietary brands of Evolite Partners LLC:</p>
             <ul>
-              <li>PRIDE Framework™</li>
-              <li>PRIDE Academy™</li>
-              <li>KASHAKA™</li>
-              <li>Evolution to Elite™</li>
+              <li>KASHAKA</li>
+              <li>PRIDE Framework</li>
+              <li>PRIDE Academy</li>
+              <li>Evolution to Elite</li>
             </ul>
+            <p>These names are used to identify Evolite Partners LLC products and services. KASHAKA, PRIDE Framework, and PRIDE Academy are proprietary brands of Evolite Partners LLC.</p>
             <p>You may not reproduce, distribute, modify, or create derivative works of any content from this Site without prior written permission from Evolite Partners LLC.</p>
           </section>
 
@@ -108,7 +109,7 @@ export default function TermsOfService() {
             <div className="legal-contact">
               <p><strong>Evolite Partners LLC</strong></p>
               <p>Washington State, United States</p>
-              <p>Email: <a href="mailto:shhally@evolitepartners.com">shhally@evolitepartners.com</a></p>
+              <p>Email: <a href="mailto:hello@evolitepartners.com">hello@evolitepartners.com</a></p>
             </div>
           </section>
 

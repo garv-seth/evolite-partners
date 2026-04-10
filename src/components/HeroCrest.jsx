@@ -50,7 +50,7 @@ export default function HeroCrest() {
                 animate={{ y: [0, 6, 0] }}
                 transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}>
                 <div className="hcv-pride">P·R·I·D·E</div>
-                <div className="hcv-label">Framework™</div>
+                <div className="hcv-label">Framework</div>
             </motion.div>
 
         </div>

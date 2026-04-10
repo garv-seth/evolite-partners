@@ -44,7 +44,7 @@ export default function Footer() {
                         <a href="https://evolitepartners.gumroad.com" target="_blank" rel="noopener noreferrer">Digital Store</a>
                         <a href="https://evolitepartners.gumroad.com/l/pride-self-assessment" target="_blank" rel="noopener noreferrer">PRIDE Self-Assessment</a>
                         <a href="https://evolitepartners.gumroad.com/l/pride-toolkit-bundle" target="_blank" rel="noopener noreferrer">PRIDE Toolkit Bundle</a>
-                        <a href="https://evolitepartners.gumroad.com" target="_blank" rel="noopener noreferrer">IRS Survival Guide™</a>
+                        <a href="https://evolitepartners.gumroad.com" target="_blank" rel="noopener noreferrer">IRS Survival Guide</a>
                         <a href="https://calendly.com/evolitepartners" target="_blank" rel="noopener noreferrer">Book a Call</a>
                     </div>
 
@@ -52,7 +52,7 @@ export default function Footer() {
                         <h4>Connect</h4>
                         <a href="https://calendly.com/evolitepartners" target="_blank" rel="noopener noreferrer">Book a Call →</a>
                         <a href="tel:+14253807110" className="footer-phone">(425) 380-7110</a>
-                        <a href="mailto:shhally@evolitepartners.com">shhally@evolitepartners.com</a>
+                        <a href="mailto:hello@evolitepartners.com">hello@evolitepartners.com</a>
                         <span className="footer-location">
                             <MapPin style={{ display: 'inline', width: '0.85rem', height: '0.85rem', verticalAlign: 'middle', marginRight: '4px', marginBottom: '1px' }} />
                             Washington State · Nationwide · International
@@ -72,9 +72,9 @@ export default function Footer() {
                 <div className="footer-divider shimmer"></div>
 
                 <div className="footer-bottom">
-                    <p>© {new Date().getFullYear()} Evolite Partners LLC. All rights reserved.</p>
+                    <p>© 2009–{new Date().getFullYear()} Evolite Partners LLC. All rights reserved.</p>
                     <p className="footer-legal">
-                        KASHAKA™, PRIDE Framework™, PRIDE Academy™ are trademarks of Evolite Partners LLC. · Washington State · Nationwide Service
+                        KASHAKA, PRIDE Framework, and PRIDE Academy are proprietary brands of Evolite Partners LLC. · Est. 2009 · Washington State · Nationwide Service
                     </p>
                     <div className="footer-legal-links">
                         <Link href="/privacy">Privacy Policy</Link>

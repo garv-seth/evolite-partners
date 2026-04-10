@@ -107,7 +107,7 @@ export async function POST(req) {
               <div style="font-family: Georgia, serif; max-width: 580px; margin: 0 auto; background: #06091a; color: #f3f4f6; padding: 32px; border-radius: 12px; border: 1px solid rgba(201,168,76,0.3);">
                 <div style="border-bottom: 1px solid rgba(201,168,76,0.3); padding-bottom: 20px; margin-bottom: 28px;">
                   <h1 style="font-size: 1.2rem; color: #c9a84c; margin: 0 0 4px; letter-spacing: 0.15em;">EVOLITE PARTNERS</h1>
-                  <p style="font-size: 0.75rem; color: #9ca3af; margin: 0; letter-spacing: 0.12em; text-transform: uppercase;">Your Free PRIDE Assessment</p>
+                  <p style="font-size: 0.75rem; color: #9ca3af; margin: 0; letter-spacing: 0.12em; text-transform: uppercase;">Your PRIDE Strategy Call — $250</p>
                 </div>
 
                 <p style="font-size: 1rem; margin: 0 0 12px;">Hi ${esc(callerName || "there")},</p>
@@ -117,7 +117,7 @@ export async function POST(req) {
 
                 <div style="text-align: center; margin: 28px 0;">
                   <a href="${calendlyLink}" style="display: inline-block; background: linear-gradient(135deg, #8b5e3c, #c9a84c); color: #06091a; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; padding: 14px 36px; border-radius: 9999px;">
-                    Book Your Free Assessment →
+                    Book a Strategy Call — $250 →
                   </a>
                 </div>
 
@@ -139,7 +139,7 @@ export async function POST(req) {
           // 2. Lead notification email to Shhally
           await resend.emails.send({
             from: process.env.RESEND_FROM_JADE ?? "Jade — Evolite Partners <jade@evolitepartners.com>",
-            to: [process.env.CONTACT_TO_EMAIL ?? "shhally@evolitepartners.com"],
+            to: [process.env.CONTACT_TO_EMAIL ?? "hello@evolitepartners.com"],
             subject: `[${urg.label}] New Phone Lead — ${esc(callerName || "Unknown")} · ${esc(primaryNeed || "General")}`,
             html: `
               <div style="font-family: Georgia, serif; max-width: 620px; margin: 0 auto; background: #06091a; color: #f3f4f6; padding: 32px; border-radius: 12px; border: 1px solid rgba(201,168,76,0.3);">

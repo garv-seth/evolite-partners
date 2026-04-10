@@ -6,17 +6,20 @@ import './about.css';
 
 export const metadata = {
   title: "About Shhally Sharma — Evolite Partners",
-  description: "The founder's story, mission, and values behind Evolite Partners. Built from 11 businesses and 9 years of Fortune 500 finance.",
+  description: "The founder's story, mission, and values behind Evolite Partners. Built from 17 businesses and 20 years of Fortune 500 finance. Est. 2009.",
 };
 
 export default function About() {
   const credentials = [
-    "11 businesses founded across multiple industries",
-    "9 years Fortune 500 financial operations",
-    "Active import/export operator — KASHAKA™ (est. 2021)",
+    "17 businesses started — 11 succeeded across multiple industries",
+    "20 years Fortune 500 financial operations — Microsoft, United Airlines, Booking.com, T-Mobile, Comcast, Holland America",
+    "14 years IRS case experience — 200+ cases resolved",
+    "$2.1M+ in client tax savings",
+    "Active import/export operator — KASHAKA (est. 2021) — 20+ countries, 5 continents",
     "Trade relationships: USA, India, Dubai, China, Africa",
     "Languages: English, Hindi, Urdu, Punjabi",
     "Washington State based — serving clients nationwide & internationally",
+    "Est. 2009 — Evolite Partners LLC",
   ];
 
   const values = [
@@ -50,7 +53,7 @@ export default function About() {
             <em className="font-accent">It&apos;s a second chance — built for founders.</em>
           </h1>
           <p className="about-hero-sub">
-            Evolite Partners was built by someone who made every mistake you&apos;re trying to avoid — and spent 9 years inside Fortune 500 finance learning how to fix them permanently.
+            Evolite Partners was built by someone who made every mistake you&apos;re trying to avoid — and spent 20 years inside Fortune 500 finance at Microsoft, United Airlines, Booking.com, T-Mobile, Comcast, and Holland America learning how to fix them permanently. Est. 2009.
           </p>
         </div>
       </section>
@@ -87,11 +90,11 @@ export default function About() {
               <h2 className="founder-bio-name">Shhally Sharma</h2>
               <p className="founder-title-label">Founder &amp; Principal Strategist, Evolite Partners</p>
 
-              <p>Shhally Sharma is not a consultant who went straight from university to a corner office. He is a founder who failed, rebuilt, and failed again — until the pattern became a playbook.</p>
-              <p>He launched his first business before he understood what an EIN was. He paid taxes he didn&apos;t owe because his entity was wrong. He missed compliance deadlines because nobody told him they existed. He lost money on international shipments because he didn&apos;t know what an HTS code was.</p>
-              <p>Then he spent 9 years inside the financial infrastructure of Fortune 500 companies — learning how the IRS actually works, how large businesses protect themselves legally, how cash flow is managed at scale, and how trade finance operates across borders.</p>
-              <p>He speaks English, Hindi, Urdu, and Punjabi. His family spans the United States and India. His trade network reaches Dubai, China, Africa, and Southeast Asia. He has personally cleared customs, negotiated with suppliers, filed IRS responses, and restructured businesses from the ground up.</p>
-              <p>Evolite Partners is the firm he needed when he started. It exists so that no founder in his community — or any community — has to learn these lessons the expensive way.</p>
+              <p>Shhally Sharma is not a consultant who went straight from university to a corner office. She is a founder who failed, rebuilt, and failed again — until the pattern became a playbook.</p>
+              <p>She launched her first business before she understood what an EIN was. She paid taxes she didn&apos;t owe because her entity was wrong. She missed compliance deadlines because nobody told her they existed. She lost money on international shipments because she didn&apos;t know what an HTS code was.</p>
+              <p>Then she spent 20 years inside the financial infrastructure of Fortune 500 companies — Microsoft, United Airlines, Booking.com, T-Mobile, Comcast, and Holland America — learning how the IRS actually works, how large businesses protect themselves legally, how cash flow is managed at scale, and how trade finance operates across borders.</p>
+              <p>She speaks English, Hindi, Urdu, and Punjabi. Her family spans the United States and India. Her trade network reaches Dubai, China, Africa, and Southeast Asia. She has personally cleared customs, negotiated with suppliers, filed IRS responses, and restructured businesses from the ground up — 200+ IRS cases resolved, $2.1M+ in client tax savings.</p>
+              <p>Evolite Partners is the firm she needed when she started. It exists so that no founder in her community — or any community — has to learn these lessons the expensive way.</p>
 
               <a
                 href="https://calendly.com/evolitepartners"
@@ -100,7 +103,7 @@ export default function About() {
                 className="btn btn-primary"
                 style={{ marginTop: '2rem', display: 'inline-flex' }}
               >
-                Book a Call with Shhally →
+                Book a Strategy Call — $250 →
               </a>
             </div>
 
@@ -144,11 +147,11 @@ export default function About() {
         <div className="container" style={{ textAlign: 'center' }}>
           <h2>Ready to work with someone who&apos;s been there?</h2>
           <p className="about-cta-sub">
-            Start with a free 30-minute PRIDE Assessment call. No obligation — just an honest conversation about where your business is and where it should be.
+            Book a $250 Strategy Call — 30 minutes with Shhally. She reviews your file before the call. You leave with a full PRIDE diagnosis and a clear next step. Or start with the PRIDE Self-Assessment ($29) for immediate guidance.
           </p>
           <div className="about-cta-btns">
             <a href="https://calendly.com/evolitepartners" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-              Book a Free Assessment →
+              Book a Strategy Call — $250 →
             </a>
             <Link href="/services" className="btn btn-outline">
               Explore Services

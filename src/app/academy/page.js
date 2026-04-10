@@ -3,7 +3,7 @@ import { IdCard, Shield, CircleDollarSign, Zap, Crown, Scale, ClipboardList, Gra
 import "./academy.css";
 
 export const metadata = {
-  title: "PRIDE Academy™ — Evolite Partners",
+  title: "PRIDE Academy — Evolite Partners",
   description: "Self-paced courses and frameworks for founders. PRIDE Self-Assessment, IRS Survival Guide, and more — built from 9 years of Fortune 500 finance.",
 };
 
@@ -20,7 +20,7 @@ export default function Academy() {
         { icon: <Scale className="w-8 h-8 text-gold" />, name: "IRS Survival Guide™", price: "$37", link: "https://evolitepartners.gumroad.com" },
         { icon: <ClipboardList className="w-8 h-8 text-gold" />, name: "Tax Strategy Workbook™", price: "$47", link: "https://evolitepartners.gumroad.com" },
         { icon: <GraduationCap className="w-8 h-8 text-gold" />, name: "Tax Strategy Course™", price: "$97", link: "https://evolitepartners.gumroad.com" },
-        { icon: <BarChart className="w-8 h-8 text-gold" />, name: "PRIDE Self-Assessment™", price: "$29", link: "https://evolitepartners.gumroad.com/l/pride-self-assessment" },
+        { icon: <BarChart className="w-8 h-8 text-gold" />, name: "PRIDE Self-Assessment", price: "$29", link: "https://evolitepartners.gumroad.com/l/pride-self-assessment" },
         { icon: <Book className="w-8 h-8 text-gold" />, name: "US Business Formation Guide™", price: "$47", link: "https://evolitepartners.gumroad.com/l/us-business-formation" },
         { icon: <Rocket className="w-8 h-8 text-gold" />, name: "Evolite Launch™ DIY Guide", price: "$97", link: "https://evolitepartners.gumroad.com/l/evolite-launch-diy" },
         { icon: <TrendingUp className="w-8 h-8 text-gold" />, name: "PRIDE Progress Tracker™", price: "$17", link: "https://evolitepartners.gumroad.com/l/pride-progress-tracker" },
@@ -34,7 +34,7 @@ export default function Academy() {
             <section className="section">
                 <div className="container">
                     <SectionHeader
-                        eyebrow="PRIDE Academy™"
+                        eyebrow="PRIDE Academy"
                         title={<>Learn the system. <em className="font-accent">Own your business.</em></>}
                         description="Self-paced courses, frameworks, and tools built from 9 years of Fortune 500 finance and 11 businesses of real-world experience."
                     />
@@ -97,7 +97,7 @@ export default function Academy() {
                         <div className="coming-card glass-card">
                             <div className="coming-badge">COMING SOON</div>
                             <h3>Import/Export for Beginners</h3>
-                            <p>A step-by-step guide to starting international trade: HTS codes, customs, suppliers, tariffs, and avoiding fraud. Based on KASHAKA™ operations.</p>
+                            <p>A step-by-step guide to starting international trade: HTS codes, customs, suppliers, tariffs, and avoiding fraud. Based on KASHAKA operations.</p>
                             <a href="/contact" className="btn btn-outline btn-sm" style={{ marginTop: 'auto' }}>
                                 Join Waitlist →
                             </a>

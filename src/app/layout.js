@@ -24,11 +24,11 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata = {
-  title: "Evolite Partners — Evolution to Elite™",
+  title: "Evolite Partners — Evolution to Elite",
   description: "Tax strategy, IRS resolution, import/export consulting, and business formation for founders. Built from 11 businesses and 9 years of Fortune 500 finance.",
   keywords: "tax strategy, IRS resolution, business formation, import export consulting, PRIDE Framework, Washington State",
   openGraph: {
-    title: "Evolite Partners — Evolution to Elite™",
+    title: "Evolite Partners — Evolution to Elite",
     description: "Tax strategy. IRS resolution. Import/Export. Business formation. We build the financial architecture that protects and grows your business.",
     type: "website",
   },

@@ -72,8 +72,8 @@ export default function Contact() {
                                 <div className="info-icon"><Calendar className="w-5 h-5 text-gold" /></div>
                                 <div>
                                     <h4>Book an Assessment</h4>
-                                    <p>Start with a 30-minute PRIDE Assessment call.</p>
-                                    <a href="https://calendly.com/evolitepartners" target="_blank" rel="noopener noreferrer" className="info-link">Schedule time →</a>
+                                    <p>Book a 30-minute Strategy Call — $250, paid online before the call.</p>
+                                    <a href="https://calendly.com/evolitepartners" target="_blank" rel="noopener noreferrer" className="info-link">Book a Strategy Call — $250 →</a>
                                 </div>
                             </div>
 
@@ -82,7 +82,7 @@ export default function Contact() {
                                 <div>
                                     <h4>Direct Communication</h4>
                                     <p>For document submission or existing client support.</p>
-                                    <a href="mailto:shhally@evolitepartners.com" className="info-link">shhally@evolitepartners.com</a>
+                                    <a href="mailto:hello@evolitepartners.com" className="info-link">hello@evolitepartners.com</a>
                                 </div>
                             </div>
 
@@ -215,7 +215,7 @@ export default function Contact() {
                                 {status === "error" && (
                                     <div className="form-error">
                                         <AlertCircle className="w-5 h-5" style={{ flexShrink: 0 }} />
-                                        <span>Something went wrong. Please email us directly at <a href="mailto:shhally@evolitepartners.com">shhally@evolitepartners.com</a></span>
+                                        <span>Something went wrong. Please email us directly at <a href="mailto:hello@evolitepartners.com">hello@evolitepartners.com</a></span>
                                     </div>
                                 )}
 

@@ -79,7 +79,7 @@ export default function PrivacyPolicy() {
           <section className="legal-section">
             <h2>7. Your Rights</h2>
             <h3>All Users</h3>
-            <p>You have the right to request access to the personal information we hold about you, request correction of inaccurate information, and request deletion of your data, subject to applicable legal requirements. To exercise these rights, contact us at <a href="mailto:shhally@evolitepartners.com">shhally@evolitepartners.com</a>.</p>
+            <p>You have the right to request access to the personal information we hold about you, request correction of inaccurate information, and request deletion of your data, subject to applicable legal requirements. To exercise these rights, contact us at <a href="mailto:hello@evolitepartners.com">hello@evolitepartners.com</a>.</p>
 
             <h3>California Residents (CCPA)</h3>
             <p>If you are a California resident, you have additional rights under the California Consumer Privacy Act (CCPA), including the right to know what personal information is collected, the right to delete personal information, the right to opt out of the sale of personal information (we do not sell personal information), and the right to non-discrimination for exercising your rights.</p>
@@ -109,7 +109,7 @@ export default function PrivacyPolicy() {
             <div className="legal-contact">
               <p><strong>Evolite Partners LLC</strong></p>
               <p>Washington State, United States</p>
-              <p>Email: <a href="mailto:shhally@evolitepartners.com">shhally@evolitepartners.com</a></p>
+              <p>Email: <a href="mailto:hello@evolitepartners.com">hello@evolitepartners.com</a></p>
             </div>
           </section>
 

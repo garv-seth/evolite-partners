@@ -18,7 +18,7 @@ export default function Services() {
                 "Tax planning guidance (not preparation)",
                 "Business structure review",
                 "Email support (48hr response)",
-                "Access to PRIDE Academy™ curriculum",
+                "Access to PRIDE Academy curriculum",
                 "Monthly resource drop (templates, checklists)",
             ],
             cta: "https://calendly.com/evolitepartners"
@@ -46,7 +46,7 @@ export default function Services() {
                 "Everything in Growth, plus:",
                 "Full-service bookkeeping & payroll",
                 "Import/Export & tariff consulting",
-                "KASHAKA™ supplier network access",
+                "KASHAKA supplier network access",
                 "Legal entity filing & maintenance",
                 "Marketing strategy support",
                 "Fractional CFO advisory",
@@ -66,7 +66,7 @@ export default function Services() {
                 "Team training",
                 "Custom international engagements",
             ],
-            cta: "mailto:shhally@evolitepartners.com"
+            cta: "mailto:hello@evolitepartners.com"
         },
     ];
 
@@ -115,7 +115,7 @@ export default function Services() {
                     <SectionHeader
                         eyebrow="Service Tiers"
                         title="Choose the Level of Support Your Business Needs"
-                        description="Every tier is designed for a specific stage. Not sure which fits? Start with a free assessment call."
+                        description="Every tier is designed for a specific stage. Not sure which fits? Start with the PRIDE Self-Assessment ($29) or book a $250 Strategy Call."
                     />
 
                     <div className="tiers-grid">
@@ -135,16 +135,16 @@ export default function Services() {
                                 </ul>
                                 <a href={tier.cta} target="_blank" rel="noopener noreferrer"
                                     className={`btn w-full mt-8 ${tier.featured ? 'btn-primary' : 'btn-outline'}`}>
-                                    {tier.num === "ENTERPRISE" ? "Contact Us →" : "Book Intro →"}
+                                    {tier.num === "ENTERPRISE" ? "Contact Us →" : "Book a Strategy Call — $250 →"}
                                 </a>
                             </div>
                         ))}
                     </div>
 
                     <div className="tier-note">
-                        <p><em>Not sure which tier fits you? Start with a free PRIDE Assessment call — we'll tell you exactly where you are and what you need.</em></p>
+                        <p><em>Not sure which tier fits you? Start with the PRIDE Self-Assessment ($29) for an immediate diagnosis, or book a $250 Strategy Call — 30 minutes with Shhally, paid before booking.</em></p>
                         <a href="https://calendly.com/evolitepartners" target="_blank" rel="noopener noreferrer" className="btn btn-primary mt-4">
-                            Book Your Assessment Call →
+                            Book a Strategy Call — $250 →
                         </a>
                     </div>
                 </div>
@@ -193,7 +193,7 @@ export default function Services() {
                 <div className="container">
                     <div className="kashaka-grid">
                         <div className="kashaka-map">
-                            <div className="eyebrow">KASHAKA™ Global Network · 10+ Countries · Active Since 2021</div>
+                            <div className="eyebrow">KASHAKA Global Network · 20+ Countries · Active Since 2021</div>
                             <div className="kashaka-nodes">
                                 {kashakaNodes.map((node, i) => (
                                     <div key={i} className="knode glass-card">
@@ -206,7 +206,7 @@ export default function Services() {
                         </div>
 
                         <div className="kashaka-content">
-                            <div className="eyebrow">KASHAKA™ Import / Export</div>
+                            <div className="eyebrow">KASHAKA Import / Export</div>
                             <h2>The only consultant with<br /><em className="font-accent">family on both sides</em><br />of the supply chain.</h2>
                             <p>When tariffs hit, most consultants Google the answer. We've been operating across Dubai, China, India, Nepal, Bhutan, Bangladesh, Pakistan, Sri Lanka, Canada, and Africa since 2021 — with family in both the US and India, active trade relationships, and verified suppliers accessible in real time.</p>
                             <p><strong>This isn't theory. This is a living network you get access to when you work with Evolite Partners.</strong></p>
@@ -255,7 +255,7 @@ export default function Services() {
                         <div className="partner-cta-card glass">
                             <h4>Are you a professional?</h4>
                             <p>If you refer clients to Evolite Partners, we prepare before every call, protect your client relationship, and deliver results you can put your name behind.</p>
-                            <a href="mailto:shhally@evolitepartners.com">Partner with us →</a>
+                            <a href="mailto:hello@evolitepartners.com">Partner with us →</a>
                         </div>
                         <div className="partner-cta-card glass">
                             <h4>Were you referred here?</h4>

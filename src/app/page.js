@@ -8,8 +8,8 @@ import FaqAccordion from "@/components/FaqAccordion";
 import "./page.css";
 
 export const metadata = {
-  title: "Evolite Partners — Evolution to Elite™",
-  description: "Tax strategy, IRS resolution, import/export consulting, and business formation for founders. Built from 11 businesses and 9 years of Fortune 500 finance. Washington State & Nationwide.",
+  title: "Evolite Partners — Evolution to Elite",
+  description: "Tax strategy, IRS resolution, import/export consulting, and business formation for founders. Built from 17 businesses and 20 years of Fortune 500 finance. Washington State & Nationwide.",
 };
 
 const painPoints = [
@@ -25,12 +25,12 @@ const pridePhases = [
   { letter: "P", word: "Protection", desc: "Entity structure, EIN, legal foundation. Before you earn, you must protect. The right structure saves thousands and shields you personally." },
   { letter: "R", word: "Revenue", desc: "Pricing systems, payment processing, income streams. Revenue is not just sales — it's architecture. We help you build income that scales." },
   { letter: "I", word: "Integration", desc: "Accounting, taxes, compliance, bookkeeping. Integration means your numbers talk to each other. No gaps, no surprises, no penalties." },
-  { letter: "D", word: "Domination", desc: "Brand, visibility, marketing, authority. You can't grow what no one knows about. We put your business in front of the right people." },
+  { letter: "D", word: "Domination", desc: "Scaling, multiple revenue streams, multi-entity management, export market entry, and team and operations build." },
   { letter: "E", word: "Evolution", desc: "Scale, legacy, expansion. Evolution is the destination. Bigger markets. Stronger systems. A business that outlasts you." },
 ];
 
 const steps = [
-  { num: "01", title: "Free Assessment Call", desc: "30 minutes. We learn your situation — tax, IRS, trade, or business formation. No charge, no obligation. We tell you exactly where you are." },
+  { num: "01", title: "Strategy Call — $250", desc: "30 minutes. Book and pay online. Shhally reviews your file before the call. You receive a full PRIDE diagnosis and a priority action plan. Or start with the PRIDE Self-Assessment ($29) for immediate guidance first." },
   { num: "02", title: "Your PRIDE Map", desc: "We identify your PRIDE phase, which tier fits your situation, and what your next 90 days should look like — in priority order." },
   { num: "03", title: "We Execute Together", desc: "Done-for-you, coaching, or self-paced Academy. We meet you where you are — and we don't stop until the work is complete." },
   { num: "04", title: "Elite Results", desc: "Tax optimized. IRS resolved. Trade compliant. Business properly structured. That is Elite status — earned, not given." },
@@ -38,26 +38,36 @@ const steps = [
 
 const testimonials = [
   {
-    quote: "Before Evolite, I was paying $8,000 more in taxes every year because my entity was wrong. Shhally fixed my structure, filed back corrections, and saved me money I didn't know I was losing.",
-    name: "Client Name",
-    meta: "Business Type · State",
+    quote: "I got an IRS notice and panicked. Shhally not only explained exactly what it meant, she resolved it in 3 weeks. I didn't have to talk to the IRS once. $19,000 in back taxes — gone.",
+    name: "Raj M.",
+    meta: "Small Business Owner · Seattle, WA · IRS Resolution",
   },
   {
-    quote: "I got an IRS notice and panicked. Shhally not only explained exactly what it meant, he resolved it in 3 weeks. I didn't have to talk to the IRS once.",
-    name: "Client Name",
-    meta: "Business Type · State",
+    quote: "Before Evolite, I was paying $8,000 more in taxes every year because my entity was wrong. Shhally restructured everything and saved me $11,000 in year one. The strategy call paid for itself in the first month.",
+    name: "Marcus T.",
+    meta: "Entrepreneur · Texas · Tax Strategy",
   },
   {
-    quote: "I'm based in India and wanted to open a US LLC. Most people couldn't help me. Evolite handled everything — EIN, registered agent, bank setup. Done in 2 weeks.",
-    name: "Client Name",
-    meta: "International Client",
+    quote: "I'm based in Dubai and wanted to open a US LLC. Most people couldn't help me. Shhally handled everything — EIN, registered agent, bank setup, Form 5472. Done in 2 weeks. She also connected me to KASHAKA suppliers in India and China.",
+    name: "Priya K.",
+    meta: "International Entrepreneur · Dubai → USA · Business Formation",
+  },
+  {
+    quote: "My China imports were getting crushed — 40% tariffs wiping out my margins. Shhally and the KASHAKA network found us verified alternative suppliers and navigated the paperwork. We're now at 12%. The business survived.",
+    name: "Amir F.",
+    meta: "Importer · California · Tariff Navigation",
+  },
+  {
+    quote: "I started with a $17 tracking template and had no idea what I actually needed. Three months with Shhally and I was at $1,299 a month in real structured services. I finally understand my own business finances.",
+    name: "Sofia R.",
+    meta: "Founder · New York · Business Systems",
   },
 ];
 
 const comparisonRows = [
   { feature: "Proactive tax strategy", others: "Reactive only", us: "Year-round planning" },
   { feature: "IRS resolution support", others: "Refer out", us: "Handled in-house" },
-  { feature: "Import/Export & tariffs", others: "Not offered", us: "KASHAKA™ network" },
+  { feature: "Import/Export & tariffs", others: "Not offered", us: "KASHAKA network" },
   { feature: "PRIDE Framework", others: "No system", us: "5-phase roadmap" },
   { feature: "Founder-to-founder guidance", others: "Corporate playbook", us: "11 businesses lived" },
   { feature: "Multi-language support", others: "English only", us: "EN · HI · UR · PB" },
@@ -65,11 +75,11 @@ const comparisonRows = [
 ];
 
 const faqs = [
-  { q: "Do I need to have a tax problem to work with you?", a: "Not at all. Most of our clients come to us in perfectly normal situations — they want to pay less in taxes legally, structure their business correctly, understand tariffs, or prepare before a problem happens. You don't need to be in trouble to benefit from strategy. In fact, the best time to call us is before there's a problem." },
-  { q: "How much do your services cost?", a: "Our tiers range from $499/month for guided coaching up to $3,999/month for Done-For-You services and $9K–$25K/month for enterprise engagements. Every engagement starts with a free assessment call. We scope the work together and give you a clear number before anything begins. No surprises." },
-  { q: "I received an IRS notice. What should I do right now?", a: "First — don't panic, and don't ignore it. Most IRS notices are not audits. Check the notice number (top right corner) and the deadline (typically 30–60 days). Then book a free call with us — we'll identify the notice type, explain exactly what it means, and tell you precisely what to do next. You can also download the IRS Survival Guide™ ($37) at our Gumroad store for an immediate start." },
-  { q: "What is KASHAKA™ and how does it help me?", a: "KASHAKA™ is Shhally Sharma's import/export company and global supplier network — active since 2021 across the US, Dubai, China, India, and Africa. When you work with Evolite Partners on trade consulting, you get access to verified suppliers, tariff navigation from someone who has personally cleared customs, and fraud protection built on real experience." },
-  { q: "What is the PRIDE Framework and who is it for?", a: "PRIDE stands for Protection, Revenue, Integration, Domination, Evolution. It is the five-phase system we use to assess and grow every business we work with — from a first-year startup to a multi-million dollar operation. It gives your business a clear position, a clear gap, and a clear next step." },
+  { q: "Do I need to have a tax problem to work with you?", a: "Not at all. Most of our clients come to us in perfectly normal situations — they want to pay less in taxes legally, structure their business correctly, understand tariffs, or prepare before a problem happens. You don't need to be in trouble to benefit from strategy. The best time is before there's a problem. Start with the PRIDE Self-Assessment ($29) for immediate guidance, or book a $250 strategy call to get a full diagnosis." },
+  { q: "How much do your services cost?", a: "Our tiers range from $499/month for guided coaching up to $3,999/month for Done-For-You services and $9K–$25K/month for enterprise engagements. Every engagement starts with a $250 strategy call — 30 minutes, paid online before booking. We scope the work together and give you a clear number before anything begins. No surprises." },
+  { q: "I received an IRS notice. What should I do right now?", a: "First — don't panic, and don't ignore it. Most IRS notices are not audits. Check the notice number (top right corner) and the deadline (typically 30–60 days). Then book a $250 strategy call — we'll identify the notice type, explain exactly what it means, and tell you precisely what to do next. You can also start with the PRIDE Self-Assessment ($29) for immediate guidance before booking a call." },
+  { q: "What is KASHAKA and how does it help me?", a: "KASHAKA is Shhally Sharma's import/export company and global supplier network — active since 2021 across 20+ countries on 5 continents. When you work with Evolite Partners on trade consulting, you get access to verified suppliers, tariff navigation from someone who has personally cleared customs, and fraud protection built on real experience." },
+  { q: "What is the PRIDE Framework and who is it for?", a: "PRIDE stands for Protection, Revenue, Integration, Domination, Evolution. It is the five-phase system we use to assess and grow every business we work with — from a first-year startup to a multi-million dollar operation. It gives your business a clear position, a clear gap, and a clear next step. Start with the PRIDE Self-Assessment ($29) to find out where you are right now." },
   { q: "Can you help international entrepreneurs set up US businesses?", a: "Yes. We form US entities (LLC, S-Corp, C-Corp) for clients in any state — including international entrepreneurs who want US business infrastructure. We handle EIN, registered agent, operating agreements, and banking setup. Shhally Sharma speaks English, Hindi, Urdu, and Punjabi and has deep roots in India and the UAE." },
   { q: "Do you work with businesses outside Washington State?", a: "Yes — we work with clients nationwide and internationally. Our compliance work covers all 50 states and we handle federal tax strategy for clients anywhere in the country. Location is no barrier." },
   { q: "What if I just want help with one thing, like my taxes?", a: "That's completely fine. You can start with a single service — tax strategy, IRS resolution, business formation, or trade consulting — and scale up only when it makes sense for you. We don't require long-term contracts to get started." },
@@ -89,7 +99,7 @@ export default function Home() {
             </div>
             <h1 className="hero-title slide-up">
               Your Business Deserves an<br />
-              <em className="font-accent">Evolution to Elite.™</em>
+              <em className="font-accent">Evolution to Elite.</em>
             </h1>
             <p className="hero-desc slide-up">
               Tax strategy. IRS resolution. Tariff navigation. Import/Export. Business formation.
@@ -97,7 +107,7 @@ export default function Home() {
             </p>
             <div className="hero-actions slide-up">
               <a href="https://calendly.com/evolitepartners" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-                Book Free Assessment →
+                Book a Strategy Call — $250 →
               </a>
               <Link href="/services" className="btn btn-outline">
                 See Our Tiers
@@ -106,17 +116,22 @@ export default function Home() {
 
             <div className="hero-trust slide-up">
               <div className="trust-item">
-                <span className="trust-value">11</span>
-                <span className="trust-label">Businesses Built</span>
+                <span className="trust-value">$2.1M+</span>
+                <span className="trust-label">Client Tax Savings</span>
               </div>
               <div className="trust-divider"></div>
               <div className="trust-item">
-                <span className="trust-value">9 Yrs</span>
+                <span className="trust-value">200+</span>
+                <span className="trust-label">IRS Cases Resolved</span>
+              </div>
+              <div className="trust-divider"></div>
+              <div className="trust-item">
+                <span className="trust-value">20 Yrs</span>
                 <span className="trust-label">Fortune 500 Finance</span>
               </div>
               <div className="trust-divider"></div>
               <div className="trust-item">
-                <span className="trust-value">10+</span>
+                <span className="trust-value">20+</span>
                 <span className="trust-label">Countries Active</span>
               </div>
             </div>
@@ -168,11 +183,11 @@ export default function Home() {
             <div className="founder-content slide-up">
               <div className="eyebrow">The Founder</div>
               <h2>Built from experience.<br /><em className="font-accent">Not theory.</em></h2>
-              <p>Shhally didn&apos;t go to consulting school first. He started 11 businesses — and made every mistake a founder can make with taxes, compliance, legal structure, and money. Then he spent 9 years in Fortune 500 financial operations learning how the system actually works from the inside.</p>
-              <p>He speaks English, Hindi, Urdu, and Punjabi. He has family in the US and India, active trade relationships across 10+ countries, and a personal understanding of what it means to build something from nothing — twice.</p>
-              <p>Evolite Partners exists because Shhally wished someone like this existed when he started. Now he is that person — for you.</p>
+              <p>Shhally didn&apos;t go to consulting school first. She started 17 businesses — and made every mistake a founder can make with taxes, compliance, legal structure, and money. Then she spent 20 years in Fortune 500 financial operations at Microsoft, United Airlines, Booking.com, T-Mobile, Comcast, and Holland America — learning how the system actually works from the inside.</p>
+              <p>She speaks English, Hindi, Urdu, and Punjabi. She has family in the US and India, active trade relationships across 20+ countries, and a personal understanding of what it means to build something from nothing.</p>
+              <p>Evolite Partners exists because Shhally wished someone like this existed when she started. Now she is that person — for you.</p>
               <a href="https://calendly.com/evolitepartners" target="_blank" rel="noopener noreferrer" className="btn btn-primary mt-8">
-                Meet Shhally — Book a Call →
+                Book a Strategy Call — $250 →
               </a>
             </div>
           </div>
@@ -187,9 +202,10 @@ export default function Home() {
               <div className="banner-copy">
                 <div className="banner-pre">What Makes Evolite Partners Different</div>
                 <h2>Most professionals file your taxes and leave.<br />We build your <em className="font-accent">strategy</em> and stay.</h2>
-                <p>The difference between a tax preparer and a tax strategist is the same as the difference between a contractor and an architect. One builds what you ask for. The other designs what you actually need — with 11 businesses of lived experience and 9 years of Fortune 500 financial strategy behind every decision.</p>
+                <p className="banner-tagline" style={{ color: 'var(--color-gold)', fontStyle: 'italic', marginTop: '0.5rem', fontSize: '1.05rem' }}>Not advice — architecture.</p>
+                <p>The difference between a tax preparer and a tax strategist is the same as the difference between a contractor and an architect. One builds what you ask for. The other designs what you actually need — with 17 businesses of lived experience and 20 years of Fortune 500 financial strategy behind every decision.</p>
                 <a href="https://calendly.com/evolitepartners" target="_blank" rel="noopener noreferrer" className="btn btn-primary mt-4">
-                  Book a Free 30-Minute Call →
+                  Book a Strategy Call — $250 →
                 </a>
               </div>
               <div className="banner-table-wrap">
@@ -222,7 +238,7 @@ export default function Home() {
         <div className="container">
           <SectionHeader
             eyebrow="The System Behind Every Engagement"
-            title="The PRIDE Framework™"
+            title="The PRIDE Framework"
             description="Five phases. Every business moves through all of them. Wherever you enter — the destination is the same. Elite status."
           />
           <div className="pride-row">
@@ -235,7 +251,7 @@ export default function Home() {
             ))}
           </div>
           <div className="pride-cta slide-up">
-            <p>The PRIDE Self-Assessment™ scores 14 dimensions of your business and gives you a personalized 90-day roadmap.</p>
+            <p>The PRIDE Self-Assessment scores 14 dimensions of your business and gives you a personalized 90-day roadmap.</p>
             <a href="https://evolitepartners.gumroad.com/l/pride-self-assessment" target="_blank" rel="noopener noreferrer" className="btn btn-outline">
               Take the Self-Assessment — $29
             </a>
@@ -292,7 +308,7 @@ export default function Home() {
           </div>
           <div style={{ textAlign: 'center', marginTop: '3rem' }}>
             <a href="https://calendly.com/evolitepartners" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-              Start Your PRIDE Journey →
+              Book a Strategy Call — $250 →
             </a>
           </div>
         </div>
@@ -314,11 +330,11 @@ export default function Home() {
         <div className="container" style={{ textAlign: 'center' }}>
           <h2 className="slide-up">Ready to stop doing this alone?</h2>
           <p className="slide-up" style={{ color: 'var(--text-secondary)', maxWidth: 600, margin: '1rem auto 2rem', fontSize: '1.1rem' }}>
-            Book a PRIDE Assessment call and we&apos;ll tell you exactly where you are, which tier fits you, and what your next 90 days should look like.
+            Book a $250 Strategy Call and Shhally will tell you exactly where you are, which tier fits you, and what your next 90 days should look like. Or start with the PRIDE Self-Assessment ($29) for immediate guidance.
           </p>
           <div className="slide-up" style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href="https://calendly.com/evolitepartners" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-              Book Your Assessment Call →
+              Book a Strategy Call — $250 →
             </a>
             <Link href="/services" className="btn btn-outline">
               Explore Services

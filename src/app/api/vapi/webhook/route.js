@@ -58,7 +58,7 @@ export async function POST(req) {
 
     await resend.emails.send({
       from: process.env.RESEND_FROM_JADE ?? "Jade — Evolite Partners <jade@evolitepartners.com>",
-      to: [process.env.CONTACT_TO_EMAIL ?? "shhally@evolitepartners.com"],
+      to: [process.env.CONTACT_TO_EMAIL ?? "hello@evolitepartners.com"],
       subject: `Call Summary — ${esc(callerPhone)} · ${new Date().toLocaleDateString("en-US", { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" })}`,
       html: `
         <div style="font-family: Georgia, serif; max-width: 620px; margin: 0 auto; background: #06091a; color: #f3f4f6; padding: 32px; border-radius: 12px; border: 1px solid rgba(201,168,76,0.3);">

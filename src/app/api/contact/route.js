@@ -85,7 +85,7 @@ export async function POST(req) {
 
     const { error } = await resend.emails.send({
       from: process.env.RESEND_FROM ?? "Evolite Partners <contact@evolitepartners.com>",
-      to: [process.env.CONTACT_TO_EMAIL || "shhally@evolitepartners.com"],
+      to: [process.env.CONTACT_TO_EMAIL || "hello@evolitepartners.com"],
       replyTo: email,
       subject: `New Inquiry — Evolite Partners | ${esc(interest)}`,
       html: `
