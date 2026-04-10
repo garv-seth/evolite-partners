@@ -28,21 +28,21 @@ export default function HeroCrest() {
             <motion.div className="hcv-badge hcv-badge-tl"
                 animate={{ y: [0, -7, 0] }}
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}>
-                <div className="hcv-num">11</div>
+                <div className="hcv-num">17</div>
                 <div className="hcv-label">Businesses Built</div>
             </motion.div>
 
             <motion.div className="hcv-badge hcv-badge-tr"
                 animate={{ y: [0, 8, 0] }}
                 transition={{ duration: 6.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}>
-                <div className="hcv-num">10<span className="hcv-plus">+</span></div>
+                <div className="hcv-num">20<span className="hcv-plus">+</span></div>
                 <div className="hcv-label">Countries Active</div>
             </motion.div>
 
             <motion.div className="hcv-badge hcv-badge-bl"
                 animate={{ y: [0, -6, 0] }}
                 transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}>
-                <div className="hcv-num">9<span className="hcv-unit">Yrs</span></div>
+                <div className="hcv-num">20<span className="hcv-unit">Yrs</span></div>
                 <div className="hcv-label">Fortune 500</div>
             </motion.div>
 
