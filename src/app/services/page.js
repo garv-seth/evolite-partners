@@ -86,7 +86,6 @@ export default function Services() {
         { flag: <MapPin className="w-5 h-5 text-gold" />, name: "Nepal", role: "South Asia · Active" },
         { flag: <MapPin className="w-5 h-5 text-gold" />, name: "Bhutan", role: "South Asia · Active" },
         { flag: <MapPin className="w-5 h-5 text-gold" />, name: "Bangladesh", role: "Manufacturing · Active" },
-        { flag: <MapPin className="w-5 h-5 text-gold" />, name: "Pakistan", role: "South Asia · Active" },
         { flag: <MapPin className="w-5 h-5 text-gold" />, name: "Sri Lanka", role: "South Asia · Active" },
         { flag: <Globe className="w-5 h-5 text-gold" />, name: "Africa", role: "Emerging Growth Markets" },
         { flag: <Globe className="w-5 h-5 text-gold" />, name: "Your Market", role: "Let's Connect" },
@@ -208,7 +207,7 @@ export default function Services() {
                         <div className="kashaka-content">
                             <div className="eyebrow">KASHAKA Import / Export</div>
                             <h2>The only consultant with<br /><em className="font-accent">family on both sides</em><br />of the supply chain.</h2>
-                            <p>When tariffs hit, most consultants Google the answer. We've been operating across Dubai, China, India, Nepal, Bhutan, Bangladesh, Pakistan, Sri Lanka, Canada, and Africa since 2021 — with family in both the US and India, active trade relationships, and verified suppliers accessible in real time.</p>
+                            <p>When tariffs hit, most consultants Google the answer. We've been operating across Dubai, China, India, Nepal, Bhutan, Bangladesh, Sri Lanka, Canada, and Africa since 2021 — with family in both the US and India, active trade relationships, and verified suppliers accessible in real time.</p>
                             <p><strong>This isn't theory. This is a living network you get access to when you work with Evolite Partners.</strong></p>
 
                             <div className="kashaka-proofs">
